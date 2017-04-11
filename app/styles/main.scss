@@ -1,0 +1,82 @@
+/*
+This project uses BEMIT CSS
+Links:
+https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/
+
+Settings – used with preprocessors and contain font, colors definitions, etc.
+Tools – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+Generic – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
+Trumps – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+*/
+
+$icon-font-path: '../fonts/';
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+
+/* Settings */
+@import 'settings.global';
+@import 'settings.colors';
+@import 'settings.fonts';
+@import 'settings.fontastic';
+/* Tools */
+@import 'tools.keyframes';
+/* Generic */
+@import 'generic.reset';
+/* Elements */
+@import 'elements.a';
+@import 'elements.headings';
+@import 'elements.section';
+@import 'elements.blockquote';
+@import 'elements.list';
+@import 'elements.p';
+/* Objects */
+@import 'objects.buttons';
+@import 'objects.table';
+@import 'objects.body-content';
+@import 'objects.search';
+@import 'objects.dropdown';
+@import 'objects.back';
+@import 'objects.row';
+/* Components */
+@import 'components.menu';
+@import 'components.header';
+@import 'components.footer';
+@import 'components.hero';
+@import 'components.carousel';
+@import 'components.article';
+@import 'components.story';
+@import 'components.result';
+@import 'components.load-more';
+@import 'components.content-nav';
+@import 'components.content';
+@import 'components.lists';
+@import 'components.well';
+@import 'components.accordion';
+@import 'components.sidebar';
+@import 'components.people-card';
+@import 'components.filter';
+@import 'components.social';
+@import 'components.video';
+@import 'components.product';
+@import 'components.graph';
+@import 'components.grid-switcher';
+@import 'components.spinner';
+@import 'components.brand';
+@import 'components.timeline';
+@import 'components.modal';
+@import 'components.myfert';
+@import 'components.myplan';
+@import 'components.progress';
+@import 'components.slide-in';
+@import 'components.plan';
+@import 'components.form';
+/* Trumps */
+@import 'trumps.utilities';
+@import 'trumps.custom-behaviors';

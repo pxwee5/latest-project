@@ -1,0 +1,136 @@
+.c-footer {
+  margin-top: 5rem;
+  border-top: 1px solid map-get($c-article, border);
+  border-bottom: 1px solid map-get($c-article, border);
+  font-size: 0.95rem;
+}
+
+  .c-footer__nav {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    @media (min-width: $screen-sm-min) {            
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .row *[class^="col-"] {
+      padding-top: 0;
+      @media (min-width: $screen-lg-min) {
+        padding-top: 30px;
+      }
+    }
+  }
+    .c-footer__nav-block .col-lg-6:first-of-type {
+      @media (min-width: $screen-lg-min) {              
+        .c-footer__nav-link {
+          justify-content: flex-end;
+          margin-right: 40px;  
+        }
+      }
+    }
+
+    .c-footer__nav-link {
+      display: block;
+      height: 4rem;
+      line-height: 1.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .c-footer__nav-icon {
+      width: 40px;
+      height: 40px;
+      background-color: map-get($c-links, normal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all map-get($t-timing, base);
+      &:hover { background-color: map-get($c-links, hover); }
+      &:active { background-color: map-get($c-links, active); }
+      img {
+        height: 35%;
+      }
+    }
+    .c-footer__nav-text {
+      font-weight: bold;
+      padding-left: 1rem;
+    }
+
+  .c-footer__container {
+    background-color: map-get($c-footer, background);
+    color: map-get($c-footer, font);
+    padding: 3rem 0;
+
+    p { margin: 0; }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    a { font-weight: bold; }
+  }
+
+  .c-footer__logo {
+  }
+    .c-footer__logo-tag {
+      margin-left: 3.35rem;
+      color: map-get($c-footer, title);
+    }
+  .c-footer__links {
+    margin-top: 1.75rem;
+    li {
+      line-height: 2rem;
+      margin: 0;
+    }
+  }
+  .c-footer__details {
+    margin-top: 20px;
+    .c-footer__details-phones {
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+    }
+    span { display: block; }
+  }
+
+  .c-footer__social {
+    white-space: nowrap;
+    margin: 1.75rem 0;
+  }
+
+  .c-footer__title {
+    color: map-get($c-footer, title);
+    font-weight: bold;
+    a { padding-bottom: 1rem }
+  }
+  .c-footer__title,
+  .c-footer__email {
+    // padding-top: 1rem;
+  }
+  .c-footer__address {
+    margin-top: 1.5rem;
+  }
+
+
+@media (min-width: $screen-sm-min) {
+  .c-footer__nav-link {
+    height: 4.5rem;
+  }
+  .c-footer__logo,
+  .c-footer__links,
+  .c-footer__details {
+    margin-top: 0;
+  }
+  .c-footer__closure {
+    margin-left: 45px;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .c-footer__nav {
+    // width: 90%;
+  }
+  .c-footer__details {
+    span { display: inline-block; }
+  }
+}

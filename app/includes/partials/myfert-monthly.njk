@@ -1,0 +1,81 @@
+<div class="c-myplan">
+  <div class="o-row c-myplan__header">
+    <div class="o-col xs--24 sm--18 c-myplan__description">
+      <small class="u-txt--secondary hidden-xs">Application Descriptions</small>
+      <h3 class="c-myplan__title">{{myfert.title}}</h3>
+    </div>
+    <div class="o-col xs--24 sm--6 c-myplan__property">
+      <small class="u-txt--secondary hidden-xs">Property</small>
+      <div class="c-myplan__title">{{myfert.location}}</div>
+    </div>
+  </div>
+  <div class="o-row c-myplan__body">
+    <div class="o-col xs--24 sm--5 c-myplan__status">
+      {% if myfert.status == 0 %}
+        <p class="u-txt--success u-txt__icon--checked">
+      {% elseif myfert.status == 1 %}
+        <p class="u-txt--warning u-txt__icon--alert">
+      {% elseif myfert.status == 2 %}
+        <p class="u-txt--danger u-txt__icon--alert">
+      {% endif %}
+          {{myfert.status_text}}
+        </p>
+      <div class="c-myplan__progress">
+        <span>{{myfert.percentage}}%</span> complete
+        <div class="c-progress"><span class="c-progress__bar" data-percentage="{{myfert.percentage}}"></span></div>
+      </div>
+    </div>
+    <div class="o-col xs--8 sm--3 c-myplan__stage">
+      <table class="text-right">
+        <tr><td>Planned</td></tr>
+        <tr><td>Ordered</td></tr>
+        <tr class="bold"><td>Applied</td></tr>
+        <tr><td>Remaining</td></tr>
+      </table>
+    </div>
+    <div class="o-col hidden-xs sm--5 c-myplan__type">
+      <table class="u-table--pa5">
+        <tr>
+          {% for item in myfert.types.planned %}
+            <td><strong>{{item.ingredient}}</strong>{{item.amount}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for item in myfert.types.ordered %}
+            <td><strong>{{item.ingredient}}</strong>{{item.amount}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for item in myfert.types.applied %}
+            <td><strong>{{item.ingredient}}</strong>{{item.amount}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for item in myfert.types.remaining %}
+            <td><strong>{{item.ingredient}}</strong>{{item.amount}}</td>
+          {% endfor %}
+        </tr>
+      </table>
+    </div>
+    <div class="o-col xs--8 sm--3 c-myplan__tonnage">
+      <table class="text-right">
+        <tr><td>T {{myfert.tonnage.planned}}</td></tr>
+        <tr><td>T {{myfert.tonnage.ordered}}</td></tr>
+        <tr class="bold"><td>T {{myfert.tonnage.applied}}</td></tr>
+        <tr><td>T {{myfert.tonnage.remaining}}</td></tr>
+      </table>
+    </div>
+    <div class="o-col xs--8 sm--4 c-myplan__cost">
+      <table class="text-right">
+        <tr><td>${{myfert.cost.planned}}</td></tr>
+        <tr><td>${{myfert.cost.ordered}}</td></tr>
+        <tr class="bold"><td>${{myfert.cost.applied}}</td></tr>
+        <tr><td>${{myfert.cost.remaining}}</td></tr>
+      </table>
+    </div>
+    <div class="o-col xs--24 sm--4 c-myplan__button">
+      <a href="#" class="o-btn o-btn--normal o-btn--block o-btn--small visible-xs">View</a>
+      <a href="#" class="o-btn o-btn--ghost o-btn--small hidden-xs" target-data="slide-in">View</a>
+    </div>
+  </div>
+</div>

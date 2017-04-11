@@ -1,0 +1,23 @@
+.c-result {
+  padding-top: 2rem;
+}
+  .c-result--no-margin {
+    padding-top: 0rem;
+  }
+
+  .c-result__text {
+    font-weight: bold;
+    margin-top: 2.85rem;
+  }
+
+@media (min-width: $screen-sm-min) {
+  .c-result__text {
+    margin-top: 4.5rem;
+  }
+}
+@media (min-width: $screen-lg-min) {
+
+  .c-result__text {
+    width: 65%;
+  }
+}

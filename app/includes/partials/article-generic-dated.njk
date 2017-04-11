@@ -1,0 +1,19 @@
+<div class="c-article">
+  <a href="{{article.permalink}}">
+    <div class="c-article__img" style="background-image: url({{article.image_url}})">
+      <div class="c-article__img-tag">{{article.tag}}</div>
+    </div>
+    <div class="c-article__body">
+      <div class="c-article__date">{{article.date}}</div>
+      <div class="match-height">
+        <h3 class="c-article__title">{{article.title}}</h3>
+        <p class="c-article__desc">
+          {{article.description}}
+        </p>
+      </div>
+    </div>
+  </a>
+  <div class="c-article__footer c-article__footer--no-border">
+    <a href="{{article.permalink}}" class="e-anchor--arrow">{{article.footer_text}}</a>
+  </div>
+</div>

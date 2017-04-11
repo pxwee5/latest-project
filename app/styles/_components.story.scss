@@ -1,0 +1,55 @@
+//Color based on $c-article
+.c-story {
+  // margin-top: 3.5rem;
+}
+  .c-story__title {
+    @extend .e-heading--alt;
+  }
+  .c-story__video,
+  .c-story__join {
+    margin-top: 1rem;
+    background-color: map-get($c-article, background);
+    border: 1px solid map-get($c-article, border);
+    border-radius: $border-radius;
+    overflow: hidden;
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+    .c-story__video-desc {
+      padding: 2rem;
+      .o-btn { display: block; }
+    }
+      .c-story__video-title {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        font-size: 1.25rem;
+        width: 100%;
+      }
+
+    .c-story__join-img {
+      padding-top: 67.78%;
+      background: no-repeat center / cover;
+    }
+    .c-story__join-links {
+      font-weight: bold;
+      margin: 2rem;
+    }
+
+
+@media (min-width: $screen-sm-min) {
+  .c-story__video-desc {
+
+    .o-btn { display: inline-block; }
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .c-story__video-title {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.75rem;
+    width: 70%;
+  }
+}

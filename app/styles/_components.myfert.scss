@@ -1,0 +1,44 @@
+.c-myfert {
+  font-size: 0.8rem;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.c-myfert__header {
+  background-color: map-get($c-myfert, header-background);
+  color: map-get($c-texts, invert);
+  font-weight: bold;
+  font-size: 1rem;
+
+
+  & > * {
+    height: 3rem;
+    justify-content: center;
+  }
+}
+  .c-myfert__season {
+    font-family: $f-veneer-clean;
+    font-weight: normal;
+    color: map-get($c-texts, medium);
+    position: relative;
+    a {
+      @extend .e-anchor--alt;
+      color: map-get($c-texts, invert);
+      font-size: 0.5rem;
+      position: absolute;
+      height: 100%;
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      &.glyphicon-triangle-left { left: 0 }
+      &.glyphicon-triangle-right { right: 0 }
+    }
+  }
+
+@media (min-width: $screen-sm-min) {
+  .c-myfert__season {
+    border-right: 1px solid map-get($c-borders, base);
+  }
+}

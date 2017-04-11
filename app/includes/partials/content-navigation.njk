@@ -1,0 +1,8 @@
+<div class="c-content-nav {{content_nav.class}}">
+  <div class="c-content-nav__title">{{content_nav.title}}</div>
+  <ul class="c-content-nav__list">
+    {% for list in content_nav.list %}
+      <li><a href="{{list.link}}">{{list.title}}</a></li>
+    {% endfor %}
+  </ul>
+</div>

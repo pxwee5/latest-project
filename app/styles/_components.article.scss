@@ -1,0 +1,112 @@
+.c-article {
+  background-color: map-get($c-article, background);
+  border: 1px solid map-get($c-article, border);
+  border-radius: $border-radius;
+  overflow: hidden;
+  // a { display: block; }
+}
+  .c-article--no-bg {
+    background: transparent;
+  }
+  .c-article--no-border {
+    border: 0;
+  }
+  .c-article__img {
+    width: 100%;
+    padding-top: 67.78%;
+    background: no-repeat center / cover;
+    position: relative;
+  }
+    .c-article__img--narrow {
+      padding-top: 27.78%;
+    }
+  .c-article__img-tag {
+    position: absolute;
+    left: 0; bottom: 0;
+    text-transform: uppercase;
+    font-family: $f-veneer-clean;
+    padding: 0.5rem 2rem;
+    background-color: rgba(map-get($c-article, tag-bg), 0.75);
+    color: map-get($c-article, tag);
+  }
+
+  .c-article__body {
+    padding: 30px 30px 24px;
+    color: map-get($c-article, text);
+
+    & > *:first-child {
+      margin-top: 0;
+      margin-bottom: 7px;
+    }
+
+    & > *:last-child { margin-bottom: 0 }
+
+    .o-btn--small {
+      margin-bottom: 8px;
+    }
+
+    .u-txt--large {
+      margin-bottom: 3px;
+    }
+  }
+    .c-article__date {
+      color: map-get($c-article, date);
+      line-height: 1rem;
+      height: 1rem;
+      margin-bottom: 1rem;
+    }
+    .c-article__title {
+      margin-top: 1rem;
+      margin-bottom: 0rem;
+      font-size: 1.35rem;
+    }
+    .c-article__desc {
+      margin-bottom: 1rem;
+    }
+    .c-article__button {
+      @extend .o-btn, .o-btn--normal;
+      margin: 1rem 0 0;
+      display: inline-block;
+    }
+    .c-article__brand {
+      min-height: 40px;
+    }
+    .c-article__brand-more {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+  .c-article__footer {
+    border-top: 1px solid map-get($c-article, border);
+    padding: 16px 2rem;
+  }
+    .c-article__footer--no-border {
+      padding-top: 0;
+      border-top: 0;
+    }
+@media (max-width: $screen-xs-max) {
+  .c-article__button {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .c-article__brand-more {
+    justify-content: space-between;
+  }
+  .c-article__button {
+    display: inline-block;
+  }
+  .c-article__brand {
+    margin: 1rem 0 0;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .c-article__brand-more {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}

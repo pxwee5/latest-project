@@ -1,0 +1,12 @@
+.c-well {
+  margin-top: 2rem;
+  padding: 1.75em;
+  background-color: map-get($c-backgrounds, well);
+  border: 1px solid map-get($c-borders, normal);
+  border-radius: $border-radius;
+  & > *:first-child { margin-top: 0px }
+  & > *:last-child { margin-bottom: 0px }
+}
+  .c-well--bold {
+    font-weight: bold;
+  }

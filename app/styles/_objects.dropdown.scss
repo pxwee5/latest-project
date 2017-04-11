@@ -1,0 +1,189 @@
+.o-dropdown {
+  position: relative;
+  font-size: 0.9rem;
+}
+  .o-dropdown__select {
+    & > button {
+      vertical-align: middle;
+      color: map-get($c-form, button);
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      line-height: 1.5rem;
+      font-weight: bold;
+      border: 0;
+      background: transparent;
+      padding: 1rem 0rem 1rem 45%;
+      outline: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      &:hover { color: map-get($c-links-alt, hover) }
+      &:active { color: map-get($c-links-alt, active) }
+      &:after {
+        content: "\e252";
+        @extend .glyphicon;
+        font-size: 0.75rem;
+        margin-left: 0.75rem;
+      }
+      &[aria-expanded=true] {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    & > label {
+      color: map-get($c-form, label);
+      font-size: 12px;
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    & > select {
+      display: none;
+    }
+  }
+
+  .o-dropdown__menu {
+    // width: calc(100% - 2rem);
+    width: 100%;
+    min-width: 150px;
+    margin-top: 0;
+    // margin-left: 1rem;
+    // margin-right: 1rem;
+    padding: 0;
+    border-radius: 0;
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px solid map-get($c-borders, normal);
+    box-shadow: 0px 0 20px 0px map-get($c-shadows, base);
+    li {
+      cursor: pointer;
+      margin: 0;
+      padding: 0.25rem 2rem;
+      &:hover {
+        background: map-get($c-backgrounds, content);
+      }
+      &:first-child { margin-top: 0.75rem; }
+      &:last-child { margin-bottom: 0.75rem; }
+      &.selected span { color: black; }
+      span {
+        color: map-get($c-links, normal);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        &:hover { color: map-get($c-links, hover); }
+        &:active { color: map-get($c-links, active); }
+        &:focus { color: map-get($c-links, focus); }
+      }
+      label {
+        position: relative;
+        width: 20px; height: 20px;
+        padding-right: 20px;
+        margin-right: 10px;
+
+        &:before {
+          content: "";
+          width: 20px; height: 20px;
+          border: 1px solid map-get($c-borders, dark);
+          background-color: transparent;
+          border-radius: $border-radius;
+          transform-origin: center;
+          transform: scale(0);
+          position: absolute;
+          top: 50%; left: 0;
+          transform: translateY(-50%);
+          transition: all map-get($t-timing, fast-m);
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 3px; left: 7px;
+          // top: 50%; left: 50%;
+          transform: scale(0) rotate(45deg);
+          opacity: 0;
+          width: 6px; height: 12px;
+          border-right: 2px solid white;
+          border-bottom: 2px solid white;
+          transition: all map-get($t-timing, fast-m);
+          transform-origin: center;
+        }
+      }
+      input[type=checkbox] {
+        position: absolute;
+        left: -9999px;
+      }
+      &.j-opt--all {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        margin-top: 0 !important;
+        border-bottom: 1px solid map-get($c-borders, normal);
+        position: relative;
+        .j-opt--close {
+          font-family: sans-serif;
+          font-size: 1rem;
+          font-weight: bold;
+          color: map-get($c-texts, light);
+          padding: 0 0.75rem;
+          position: absolute;
+          height: 100%;
+          top: 0;
+          right: 0;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+        }
+        & + li {
+          margin-top: 0.75rem;
+        }
+      }
+
+      &.selected {
+        label {
+          &:before {
+            background-color: map-get($c-links, normal);
+            border-color: map-get($c-links, normal);
+          }
+          &:after {
+            opacity: 1;
+            // transform: rotate(45deg);
+            transform: scale(1) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+
+
+@media (min-width: $screen-sm-min){
+
+  .o-dropdown__select {
+    & > button {
+      justify-content: flex-start;
+      padding: 2rem 0rem 1rem 2rem;
+    }
+    & > label {
+      top: 1.25rem;
+      left: 2rem;
+    }
+  }
+
+  .o-dropdown__menu {
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    li {
+      padding: 0.3rem 1rem 0.3rem 2rem;
+    }
+  }
+
+}
+@media (min-width: $screen-lg-min){}

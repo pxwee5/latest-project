@@ -1,0 +1,30 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+  {% from "data/heros.njk" import heros %}
+  {% set hero = heros[1] %}
+
+  <div class="o-body-content__block generic content">
+    {% include "includes/components/header.njk" %}
+    {% include "includes/components/hero-static.njk" %}
+    <section class="e-section--border-b e-section--white">
+      <div class="container">
+        {% from "data/content-navigation.njk" import content_navs %}
+        {% set content_nav = content_navs[0] %}
+        {% include "includes/partials/content-navigation.njk" %}
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8">
+          {% include "includes/components/content.njk" %}
+        </div>
+        <div class="col-xs-12 col-md-4">
+          {% include "includes/components/sidebar.njk" %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

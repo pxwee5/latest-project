@@ -1,0 +1,38 @@
+.o-search {
+  position: relative;
+  width: 100%;
+  background-color: map-get($c-form, background);
+}
+  .o-search__wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .o-search__icon {
+    font-size: 1.5rem;
+    width: 2rem;
+    vertical-align: middle;
+  }
+  .o-search__input {
+    outline: none;
+    border: 0;
+    width: calc(100% - 2.5rem);
+  }
+
+  .o-search__switcher {
+    position: absolute;
+    top: 50%; right: 0px;
+    transform: translateY(-50%);
+    margin-right: 15px;
+  }
+
+@media (min-width: $screen-sm-min) {
+  .o-search__wrapper {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}

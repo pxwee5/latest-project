@@ -1,0 +1,36 @@
+.c-switcher {
+  display: none;
+  align-items: center;
+  font-size: 0.85rem;
+  & > * {
+    margin-left: 1rem;
+    display: block;
+  }
+}
+  .c-switcher__title {
+    color: map-get($c-texts, light);
+  }
+
+  .c-switcher__grid,
+  .c-switcher__list {
+    cursor: pointer;
+    font-size: 1rem;
+    &.active {
+      color: map-get($c-links, normal);
+    }
+  }
+  .c-switcher__grid:after {
+    content: "\e011";
+    @extend .glyphicon;
+    margin-bottom: 5px;
+  }
+  .c-switcher__list:after {
+    content: "\e236";
+    @extend .glyphicon;
+  }
+
+@media (min-width: $screen-sm-min) {
+  .c-switcher {
+    display: flex;
+  }
+}

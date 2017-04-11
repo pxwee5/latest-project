@@ -1,0 +1,114 @@
+.c-content {
+  padding-top: 3.25rem;
+  // border-bottom: 1px solid map-get($c-borders, normal);
+  > *:first-child { margin-top: 0 }
+  > *:last-child { margin-bottom: 0 }
+
+  h1 { margin-top: 1.25rem; }
+
+  h2, h3, h4 {
+
+  }
+
+  h5, h6 {
+    @extend .e-heading--alt;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  ul, ol {
+    & + ul,
+    & + ol {
+      margin-top: $content-spacing;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: $border-radius;
+  }
+}
+  .c-content__float-left {
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .c-content__sidebar {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+  .c-content__intro {
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin-top: 1.5em;
+  }
+  .c-content__footer {
+    margin-top: 3.125rem;
+  }
+  .c-content__date {
+    font-size: 0.9rem;
+    color: map-get($whites, dark-m);
+  }
+
+@media (min-width: $screen-sm-min) {
+  .c-content__float-left {
+    width: 50%;
+    float: left;
+  }
+
+  //Important to make sure span, strong and ul/ol have max CPL
+  .c-content,
+  .c-content__footer {
+    p, ul, ol { max-width: $cpl-sm; }
+    blockquote > * {
+      display: block;
+      padding-right: calc(100% - #{$cpl-sm});
+    }
+  }
+
+  //Important to make sure span, strong and ul/ol have max CPL
+  .c-content .c-accordion__body {
+    p, ul, ol { max-width: $cpl-sm; }
+    blockquote > * {
+      display: block;
+      padding-right: calc(100% - #{$cpl-sm});
+    }
+  }
+
+  .c-content__sidebar {
+    width: 45%;
+    float: right;
+    display: inline-block;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: $screen-md-min) {
+  .c-content__float-left {
+    width: 100%;
+    float: none;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  //Important to make sure span, strong and ul/ol have max CPL
+  .c-content,
+  .c-content__footer {
+    p, ul, ol { max-width: $cpl-lg; }
+    blockquote > * {
+      display: block;
+      padding-right: calc(100% - #{$cpl-lg});
+    }
+  }
+
+  //Important to make sure span, strong and ul/ol have max CPL
+  .c-content .c-accordion__body {
+    p, ul, ol { max-width: $cpl-lg; }
+    blockquote > * {
+      display: block;
+      padding-right: calc(100% - #{$cpl-lg});
+    }
+  }
+}

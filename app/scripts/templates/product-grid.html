@@ -1,0 +1,41 @@
+<div class="col-xs-12 col-sm-6 col-lg-4">
+  <div class="c-product">
+    <div class="c-product__header match-height">
+      <div class="u-split u-split--align-btm">
+        <img class="c-product__logo" src="{{logo_url}}" alt="">
+        <div class="c-product__name">{{name}}</div>
+      </div>
+    </div>
+    <div class="c-product__graph">
+      <div class="c-graph">
+        <div class="c-graph__min">0</div>
+        <div class="c-graph__mid">25</div>
+        <div class="c-graph__max">50+</div>
+        <div class="c-graph__set">
+          {{#data}}
+          <div class="c-graph__data">
+            <span class="c-graph__title" data-ingredient="{{name}}">{{name}}</span>
+            <span class="c-graph__bar" data-amount="{{amount}}"></span>
+          </div>
+          {{/data}}
+        </div>
+      </div>
+      <div class="text-center">
+        <p class="u-txt--secondary">
+        This product contains {{na}}% of sodium per T
+        </p>
+      </div>
+    </div>
+    <div id="{{guid}}" class="c-product__desc-wrap collapse">
+      <div class="c-product__desc">{{description}}</div>
+    </div>
+    <button class="c-product__desc-btn o-btn__collapsible o-btn__collapsible--autotxt collapsed" aria-expanded="false" data-toggle="collapse" data-target="#{{guid}}"></button>
+    <div class="c-product__footer">
+      <div class="c-product__split">
+        <div class="c-product__price">{{price}} / T</div>
+        <div class="c-product__ref">Ref: {{ref}}</div>
+      </div>
+      <a href="#" class="o-btn o-btn--normal o-btn--small o-btn--block c-product__link">Product Details</a>
+    </div>
+  </div>
+</div>

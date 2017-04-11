@@ -1,0 +1,207 @@
+<section class="c-content">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+        <h2 id="business" class="u-mt--0">Our Business</h2>
+        <p class="c-content__intro">
+          Ballance is a New Zealand farmer-owned co-operative that helps its customers to farm more productively, proﬁtably and sustainably.
+        </p>
+        <p>From our core business of fertiliser manufacturing, supply, sales and advice, we have grown to offer farmers a full range of science-backed nutrient products and services. This enables us to help farmers achieve soil and animal nutrition and productivity with a minimal environmental footprint.</p>
+        <blockquote>
+          <strong>“When it comes to rural supply operations, there are people who sell fertilisers and feed – and then there's Ballance. We know that farmers want because farmersown us. They count on us to be one step ahead of their changing needs.”</strong>
+        </blockquote>
+        <p>Our agri-nutrient advice is complemented by award-winning web-based farm systems software, which enables farmers to capture and analyse a wealth of information, and so make the best management decisions for their business.</p>
+        <p>As well as supporting New Zealand farmers, Ballance also supplies products to a range of industrial businesses.</p>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        {% include "includes/partials/about-sidebar.njk" %}
+      </div>
+
+    </div>
+
+    <hr />
+
+    <div class="row">
+      <div class="col-xs-8">
+        <h2 id="brands" class="u-mt--0">Our Brands</h2>
+        <p class="c-content__intro">
+          Ballance Ag-Nutrients is proud to own and operate the following brands:
+        </p>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="c-brand">
+          <div class="c-brand__image">
+            <img src="/images/about-brand1.png" alt="">
+          </div>
+          <div class="c-brand__content">
+            <div class="match-height">
+              <h6 class="c-brand__title">Seales-Winslow</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed docol-sm-6 eiulgod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <a href="" class="o-btn o-btn--normal u-mt--3">Visit Seales-winslow</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="c-brand">
+          <div class="c-brand__image">
+            <img src="/images/about-brand2.png" alt="">
+          </div>
+          <div class="c-brand__content">
+            <div class="match-height">
+              <h6 class="c-brand__title">Super Air</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <a href="" class="o-btn o-btn--normal u-mt--3">Visit Super Air</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <h2 class="e-heading--alt">More about us</h2>
+    <div class="row u-mb--5">
+      {% from "data/abouts.njk" import abouts %}
+
+      {% for i in range(0, 3) -%}
+        {% set article = abouts[i] %}
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          {% include "includes/partials/article-about.njk" %}
+        </div>
+      {%- endfor %}
+
+      <div class="col-xs-12 col-sm-6 col-lg-12">
+        <div class="c-video u-mt--0">
+          <div class="c-video__overlay" style="background-image: url('/images/about-video.jpg')">
+            <div class="c-video__play o-btn o-btn--normal o-btn--round">
+              <span class="glyphicon glyphicon-play"></span>
+            </div>
+          </div>
+          <iframe id="story-video" class="c-video__embed" src="https://www.youtube.com/embed/GNfjZ8-qoVk?rel=0&disablekb=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="e-section--white e-section--border-t e-section--border-b">
+    <div class="container">
+      <h2 id="history">Our History</h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-8">
+          <p class="c-content__intro">
+            The history of Ballance Agri-Nutrients Limited is one of foresight, partnership and perseverance.
+          </p>
+          <p>Its origins can be traced back to the late 1800s, when sulphur was mined at White Island, an active off-shore volcano situated in the Bay of Plenty. Conditions were bleak and health and safety non-existent – at one point an eruption killed 14 men working on the island. The mined sulphur was shipped to Tauranga, where it was reﬁned before being sold both in New Zealand and Australia. </p>
+          <p>As New Zealand’s farming industry grew, so As New Zealand’s farming industry grew, so products. In the early twentieth century, tests at Ruakura showed the beneﬁt of phosphatic fertilisers, and as time went on demand for was broken in for pastoral use.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <blockquote>
+            <strong>"The company completed its planned evolution in 2005, when the co-operative bought the 20 percent shareholding held by Yara. As a result, Ballance was once again a 100 percent farmer-owned company, a position that leaves it ready to move into the next phase of its development."</strong>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="c-timeline">
+        <div class="c-timeline__event">
+          <div class="c-timeline__wrapper">
+            <h3>1940's – 1970's</h3>
+            <h6>Early co-operatives</h6>
+            <div id="timeline1" class="c-timeline__content j-expandable">
+              <p>In the post-Second World War years, farmers in some regions of the country were experiencing In the post-Second World War years, farmers in some regions of the country were experiencing difﬁculties getting sufﬁcient fertiliser as and when they needed it. In both Southland and the </p>
+              <p>difﬁculties getting sufﬁcient fertiliser as and when they needed it. In both Southland and the In Southland, a group of local farmers formed the Southland Co-operative Phosphate farmers in the Bay of Plenty were working towards the establishment of the Bay of Plenty Fertiliser Co-operative, which also issued its ﬁrst shares in 1955. </p>
+              <p>Fertiliser Co-operative, which also issued its ﬁrst shares in 1955. be shipped in from locations such as Nauru and Christmas Island. </p>
+              <p>The two co-operatives operated independently through the 1960s and 1970s, the heyday years of New Zealand agriculture.</p>
+            </div>
+            <a href="#" class="c-timeline__more o-btn__collapsible" target-data="#timeline1">Read More</a>
+          </div>
+        </div>
+
+        <div class="c-timeline__event">
+          <div class="c-timeline__wrapper">
+            <h3>1980's – 1999's</h3>
+            <h6>Responding to economic challenge</h6>
+            <div id="timeline2" class="c-timeline__content j-expandable">
+              <p>In the post-Second World War years, farmers in some regions of the country were experiencing In the post-Second World War years, farmers in some regions of the country were experiencing difﬁculties getting sufﬁcient fertiliser as and when they needed it. In both Southland and the </p>
+              <p>difﬁculties getting sufﬁcient fertiliser as and when they needed it. In both Southland and the In Southland, a group of local farmers formed the Southland Co-operative Phosphate farmers in the Bay of Plenty were working towards the establishment of the Bay of Plenty Fertiliser Co-operative, which also issued its ﬁrst shares in 1955. </p>
+              <p>Fertiliser Co-operative, which also issued its ﬁrst shares in 1955. be shipped in from locations such as Nauru and Christmas Island. </p>
+              <p>The two co-operatives operated independently through the 1960s and 1970s, the heyday years of New Zealand agriculture.</p>
+            </div>
+            <a href="#" class="c-timeline__more o-btn__collapsible" target-data="#timeline2">Read More</a>
+          </div>
+        </div>
+
+        <div class="c-timeline__event">
+          <div class="c-timeline__wrapper">
+            <h3>1990's – 2000</h3>
+            <h6>A Country wide company</h6>
+            <div id="timeline3" class="c-timeline__content j-expandable">
+              <p>In the post-Second World War years, farmers in some regions of the country were experiencing In the post-Second World War years, farmers in some regions of the country were experiencing difﬁculties getting sufﬁcient fertiliser as and when they needed it. In both Southland and the </p>
+              <p>difﬁculties getting sufﬁcient fertiliser as and when they needed it. In both Southland and the In Southland, a group of local farmers formed the Southland Co-operative Phosphate farmers in the Bay of Plenty were working towards the establishment of the Bay of Plenty Fertiliser Co-operative, which also issued its ﬁrst shares in 1955. </p>
+              <p>Fertiliser Co-operative, which also issued its ﬁrst shares in 1955. be shipped in from locations such as Nauru and Christmas Island. </p>
+              <p>The two co-operatives operated independently through the 1960s and 1970s, the heyday years of New Zealand agriculture.</p>
+            </div>
+            <a href="#" class="c-timeline__more o-btn__collapsible" target-data="#timeline3">Read More</a>
+          </div>
+        </div>
+
+        <div class="c-timeline__event">
+          <div class="c-timeline__wrapper">
+            <h3>2000+</h3>
+            <h6>Ballance is Born</h6>
+            <div id="timeline4" class="c-timeline__content j-expandable">
+              <p>In the post-Second World War years, farmers in some regions of the country were experiencing In the post-Second World War years, farmers in some regions of the country were experiencing difﬁculties getting sufﬁcient fertiliser as and when they needed it. In both Southland and the </p>
+              <p>difﬁculties getting sufﬁcient fertiliser as and when they needed it. In both Southland and the In Southland, a group of local farmers formed the Southland Co-operative Phosphate farmers in the Bay of Plenty were working towards the establishment of the Bay of Plenty Fertiliser Co-operative, which also issued its ﬁrst shares in 1955. </p>
+              <p>Fertiliser Co-operative, which also issued its ﬁrst shares in 1955. be shipped in from locations such as Nauru and Christmas Island. </p>
+              <p>The two co-operatives operated independently through the 1960s and 1970s, the heyday years of New Zealand agriculture.</p>
+            </div>
+            <a href="#" class="c-timeline__more o-btn__collapsible" target-data="#timeline4">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <h2 id="partners">Business Partners</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-lg-8">
+        <p class="c-content__intro">
+          If you are interested in supplying goods or services to Ballance Agri-Nutrients, you should ﬁrst familiarise yourself with our terms and conditions.
+        </p>
+        <ul>
+          <li>These are outlined in the Agreement for Supply of Products and Services document</li>
+          <li>Merchant partners can view the terms and conditions applicable to their business</li>
+          <li>If you represent a commercial company that wishes to purchase from us, please contact our Channel Manager.</li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+        <div class="c-well u-mt--0">
+          <h5>Important Documents</h5>
+          <ul class="c-list c-list--typed c-list--first-mt0">
+            <li class="pdf"><a href="#">Agreement of Supply of Products and Services</a></li>
+            <li class="pdf"><a href="#">Terms &amp; Conditions – Merchant Customers</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class="" />
+
+    <h2 class="e-heading--alt">You may also be interested in</h2>
+
+    <div class="row">
+      {% for i in range(3, 6) -%}
+        {% set article = abouts[i] %}
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          {% include "includes/partials/article-about.njk" %}
+        </div>
+      {%- endfor %}
+    </div>
+  </div>
+
+</section>

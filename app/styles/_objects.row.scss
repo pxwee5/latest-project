@@ -1,0 +1,59 @@
+/**
+* This is a 24 point grid system without padding.
+* .o-col to define the columns
+* .sm--[size 0 - 24] for the column sizes. (works only with o-col defined)
+* .sm--0 will display none
+* All columns have display flex and aligned to center
+* Mainly used as an alternative table
+**/
+.o-row {
+  display: flex;
+  flex-wrap: wrap;
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+.o-col {
+  display: flex;
+  align-items: center;
+  float: left;
+
+  @media (max-width: $screen-xs-max) {
+    @for $i from 1 through 24 {
+      &.xs--#{$i} { width: #{$i * 100% / 24}; }
+      &.offset-xs--#{$i} { margin-left: #{$i * 100% / 24}; }
+    }
+  }
+  @media (min-width: $screen-sm-min) {
+    @for $i from 1 through 24 {
+      &.sm--#{$i} { width: #{$i * 100% / 24}; }
+      &.offset-sm--#{$i} { margin-left: #{$i * 100% / 24}; }
+    }
+  }
+  @media (min-width: $screen-lg-min) {
+    @for $i from 1 through 24 {
+      &.lg--#{$i} { width: #{$i * 100% / 24}; }
+      &.offset-lg--#{$i} { margin-left: #{$i * 100% / 24}; }
+    }
+  }
+}
+
+.visible-xs-flex { display: none !important; }
+.visible-sm-flex { display: none !important; }
+.visible-lg-flex { display: none !important; }
+@media (max-width: $screen-xs-max) {
+  .visible-xs-flex { display: flex !important; }
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+  .visible-sm-flex { display: flex !important; }
+}
+@media (min-width: $screen-lg-min) {
+  .visible-lg-flex { display: flex !important; }
+}

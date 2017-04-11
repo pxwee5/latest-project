@@ -1,0 +1,102 @@
+.c-list {
+  list-style: none;
+  padding: 0;
+}
+  .c-list--first-mt0 {
+    & > li:first-child {
+      margin-top: 0;
+    }
+  }
+
+.c-list--2,
+.c-list--3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.c-list--2 > * { width: 100% }
+.c-list--3 > * { width: 100% }
+
+.c-list--horizontal {
+  li {
+    display: inline-block;
+  }
+}
+
+
+.c-list--breadcrumb {
+  margin: 0;
+  li {
+    display: inline-block;
+    margin: 0;
+    &:nth-child(n+2):before {
+      content: '>';
+      color: map-get($c-lists, separator);
+      margin: 0 0.25rem;
+    }
+  }
+  a {
+    color: map-get($whites, base);
+    transition: all 0.25s;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: map-get($c-links, normal);
+      padding-bottom: 0;
+      border-bottom: 1px solid map-get($c-links, normal);
+    }
+  }
+}
+
+.c-list--checked {
+  li {
+    position: relative;
+    padding-left: 1.25rem;
+    &:before {
+      @extend .glyphicon, .glyphicon-ok;
+      font-size: 0.4rem;
+      color: map-get($c-buttons, text-normal);
+      width: 0.9rem; height: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      vertical-align: middle;
+      background-color: map-get($c-links, normal);
+      position: absolute;
+      top: 0; left: 0;
+      transform: translateY(25%);
+    }
+  }
+}
+
+.c-list--typed {
+  li {
+    position: relative;
+    padding-left: 2.25rem;
+
+    &:before {
+      content: 'PDF';
+      text-transform: capitalize;
+      font-size: 0.85rem;
+      font-family: $f-veneer-clean;
+      border-radius: $border-radius;
+      width: 1.5rem;
+      text-align: center;
+      background-color: map-get($c-lists, document-bg);
+      color: map-get($c-lists, document-text);
+      display: inline-block;
+      position: absolute;
+      top:0px; left: 0;
+    }
+  }
+  .pdf:before { content: 'pdf' }
+  .jpg:before { content: 'jpg' }
+  .gif:before { content: 'gif' }
+  .doc:before { content: 'doc' }
+}
+
+@media (min-width: $screen-sm-min) {
+  .c-list--2 > * { width: 50% }
+  .c-list--3 > * { width: 33% }
+}

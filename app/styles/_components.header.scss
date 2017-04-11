@@ -1,0 +1,65 @@
+.index .c-header { display: none; } //Note to Backend: Breadcrumb hidden in index.
+.index .c-list--breadcrumb { display: none; } //Note to Backend: Breadcrumb hidden in index.
+
+.c-header {
+  position: fixed;
+  top: map-get($menu-btns-size, mobile); right: 0;
+  width: 100%;
+  background-color: rgba(map-get($c-header, background), 0.9);
+  color: map-get($c-texts, invert);
+  z-index: 49;
+  overflow: hidden;
+}
+  .c-header__wrapper {
+    position: relative;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .c-header__logo {
+    position: absolute;
+    top: 50%; right: 20px;
+    transform: translateY(-50%);
+    // float: right;
+    height: 60%;
+    h1 { margin: 0; height: 100%; }
+    a {
+      display: block;
+      height: 100%;
+      line-height: 0;
+    }
+    img { height: 100%; }
+  }
+
+  // Refer to Headroom.js
+  .headroom {
+    transition: transform map-get($t-timing, base);
+  }
+  .headroom--pinned {
+    transform: translateY(0%);
+  }
+  .headroom--unpinned {
+    transform: translateY(-100%);
+  }
+@media (min-width: $screen-sm-min) {
+  .index .c-header { display: block; }
+  .c-header {
+    top: 0;
+    width: calc(100% - #{map-get($menu-btns-size, desktop)});
+  }
+  .c-header__logo {
+    right: 0px;
+  }
+
+  .headroom {
+    transition: transform map-get($t-timing, base);
+  }
+  .headroom--pinned {
+    transform: none;
+  }
+  .headroom--unpinned {
+    transform: none;
+  }
+
+}

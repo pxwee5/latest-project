@@ -1,0 +1,51 @@
+/* f-variable denotes font-variable */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+@font-face {
+    font-family: 'veneer_cleansoft';
+    src: url('../fonts/yellow_design_studio_-_veneerclean-soft-webfont.woff2') format('woff2'),
+         url('../fonts/yellow_design_studio_-_veneerclean-soft-webfont.woff') format('woff'),
+         url('../fonts/yellow_design_studio_-_veneerclean-soft-webfont.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$f-roboto: 'Roboto', sans-serif;
+$f-veneer-clean: 'veneer_cleansoft', sans-serif;
+
+$f-h1: (
+  xs: 2.25rem,
+  sm: 2.50rem,
+  md: 2.75rem,
+  lg: 3.00rem,
+);
+$f-h2: (
+  xs: 2rem,
+  sm: 2.25rem,
+  md: 2.25rem,
+  lg: 2.25rem,
+); //Confirmed
+$f-h3: (
+  xs: 1.75rem,
+  sm: 1.75rem,
+  md: 1.75rem,
+  lg: 1.75rem,
+); //Confirmed
+$f-h4: (
+  xs: 1.3rem,
+  sm: 1.3rem,
+  md: 1.3rem,
+  lg: 1.3rem,
+); //Confirmed
+$f-h5: (
+  xs: 1.05rem,
+  sm: 1.10rem,
+  md: 1.10rem,
+  lg: 1.15rem,
+);
+$f-h6: (
+  xs: 1.00rem,
+  sm: 1.00rem,
+  md: 1.00rem,
+  lg: 1.00rem,
+);

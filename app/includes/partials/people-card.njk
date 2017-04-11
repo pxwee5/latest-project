@@ -1,0 +1,38 @@
+<div class="c-people">
+  <div class="c-people__card match-height">
+    <div class="c-people__desc">
+      <div class="c-people__image-wrapper">
+        <div class="c-people__image" style="background-image: url({{people.image_url}})"></div>
+      </div>
+      <div class="c-people__info">
+        <div class="c-people__name">{{people.name}}</div>
+        <div class="c-people__title">{{people.job_title}}</div>
+        <div class="c-people__location">{{people.location}}</div>
+      </div>
+    </div>
+
+    <div class="c-people__contacts">
+      <table>
+        <tr>
+          <td class="u-txt__width">M</td>
+          <td><a href="tel:{{people.mobile | replace(" ","-")}}">{{people.mobile}}</a></td>
+        </tr>
+        <tr>
+          <td class="u-txt__width">P</td>
+          <td><a href="tel:{{people.phone | replace(" ","-")}}">{{people.phone}}</a></td>
+        </tr>
+        <tr>
+          <td class="u-txt__width">E</td>
+          <td><a class="" href="mailto:{{people.email}}">{{people.email}}</a></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <div id="{{people.name | replace(' ', '-')}}" class="c-people__profile j-expandable">
+    {{people.profile|safe}}
+  </div>
+
+  <button class="o-btn__collapsible o-btn__collapsible--autotxt c-people__button collapsed" target-data="#{{people.name | replace(' ', '-')}}" type="button"></button>
+</div>

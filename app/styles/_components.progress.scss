@@ -1,0 +1,18 @@
+.c-progress {
+  height: 7px;
+  margin-top: 0.25rem;
+  border-radius: 100px 100px 100px 100px;
+  background-color: map-get($c-borders, normal);
+  position: relative;
+  overflow: hidden;
+}
+
+  .c-progress__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: width map-get($t-timing, base);
+    background-color: map-get($c-links, normal);
+  }

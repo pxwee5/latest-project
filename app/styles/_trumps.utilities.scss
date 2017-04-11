@@ -1,0 +1,96 @@
+.u-checkbox--hidden {
+  display: none;
+}
+.u-txt--veneer {
+  font-family: $f-veneer-clean;
+  font-weight: normal;
+}
+.u-txt--secondary {
+  color: map-get($c-texts, light);
+}
+.u-txt--large {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.u-txt--med {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.u-txt--success { color: map-get($greens, base) }
+.u-txt--warning { color: map-get($yellows, base) }
+.u-txt--danger { color: map-get($reds, base) }
+.u-txt--link { color: map-get($blues, base) }
+.u-txt__icon--alert:before,
+.u-txt__icon--checked:before {
+  @extend .fa;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+.u-txt__icon--alert:before { content: "\f06a"; }
+.u-txt__icon--checked:before { content: "\f058"; }
+
+.u-txt__width {
+  display: inline-block;
+  width: 1.5rem;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.u-split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  & > * {
+    margin: 5px 0;
+  }
+  & + * {
+    margin-top: 2rem;
+  }
+  & div + div {
+    text-align: right;
+  }
+}
+  .u-split--align-btm {
+    align-items: flex-end;
+  }
+
+.u-abs--tl {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+
+
+@media (min-width: $screen-lg-min) {
+  .u-split {
+    flex-wrap: nowrap;
+  }
+}
+
+// Inspired from https://v4-alpha.getbootstrap.com/utilities/spacing/ + BEMIT CSS
+$spacer: 0.5rem;
+@for $i from 0 through 10 {
+  .u-ma--#{$i} { margin: calc(#{$i} * #{$spacer}); }
+  .u-mt--#{$i} { margin-top: calc(#{$i} * #{$spacer}); }
+  .u-mr--#{$i} { margin-right: calc(#{$i} * #{$spacer}); }
+  .u-mb--#{$i} { margin-bottom: calc(#{$i} * #{$spacer}); }
+  .u-ml--#{$i} { margin-left: calc(#{$i} * #{$spacer}); }
+  .u-mtb--#{$i} {
+    margin-top: calc(#{$i} * #{$spacer});
+    margin-bottom: calc(#{$i} * #{$spacer});
+  }
+
+  .u-pa--#{$i} { padding: calc(#{$i} * #{$spacer}); }
+  .u-pt--#{$i} { padding-top: calc(#{$i} * #{$spacer}); }
+  .u-pr--#{$i} { padding-right: calc(#{$i} * #{$spacer}); }
+  .u-pb--#{$i} { padding-bottom: calc(#{$i} * #{$spacer}); }
+  .u-pl--#{$i} { padding-left: calc(#{$i} * #{$spacer}); }
+  .u-ptb--#{$i} {
+    padding-top: calc(#{$i} * #{$spacer});
+    padding-bottom: calc(#{$i} * #{$spacer});
+  }
+}

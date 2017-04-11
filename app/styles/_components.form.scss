@@ -1,0 +1,143 @@
+form input::-webkit-validation-bubble-message,
+form select::-webkit-validation-bubble-message,
+form textarea::-webkit-validation-bubble-message {
+  display:none;
+}
+.c-form {
+  button {
+    height: 44px;
+    font-weight: bold;
+  }
+  input,
+  textarea {
+    &.valid {
+      border-color: map-get($greens, base);
+    }
+    &.error {
+      border-color: map-get($reds, base);
+      & + .c-form__error-msg {
+        max-height: 6rem;
+      }
+    }
+  }
+  .row:before {
+    margin-top: 0;
+  }
+  .row *[class^="col-"]:first-of-type {
+    padding-top: 0;
+  }
+}
+
+.col-md-6 .c-form {
+  @media (min-width: $screen-md-min) {
+    margin-right: 45px;
+  }
+}
+
+  .c-form--inline {
+    & > * {
+      display: block;
+    }
+  }
+  .c-form__group {
+    position: relative;
+    button {
+      margin: 0;
+    }
+  }
+  .c-form__label,
+  .c-form__error-msg,
+  .c-form__required {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+    @media (min-width: $screen-sm-min) {
+      font-size: .75rem;
+      margin-bottom: 5px;
+    }
+  }
+  .c-form__error-msg {
+    color: map-get($c-form, error-msg);
+    transition: all map-get($t-timing, base);
+    max-height: 0;
+    overflow: hidden;
+  }
+  .c-form__control {
+    font-size: 0.9rem;
+    line-height: 20px;
+    border-radius: $border-radius;
+    background: map-get($c-form, background);
+    padding: 12px 20px;
+    outline: none;
+    width: 100%;
+    border: 1px solid map-get($c-borders, dark);
+    text-align: left;
+    transition: all map-get($t-timing, fast-m);
+  }
+
+  .c-form__title {
+    float: left;
+  }
+
+  .c-form__required {
+    color: #909090;
+    margin: 0;
+    float: right;
+    line-height: 2rem;
+  }
+
+  .c-form__label--required:after {
+    content: '*';
+    color: map-get($reds, base);
+  }
+  .c-form__input-text {
+    height: 44px;
+
+  }
+
+  .c-form__select {
+    & > label {
+      @extend .c-form__label;
+    }
+    & > button {
+      @extend .c-form__control;
+      &:after {
+        @extend .glyphicon;
+        content: "\e252";
+        font-size: 0.75rem;
+        float: right;
+        line-height: 20px;
+      }
+      &[aria-expanded=true]:after {
+        transform: rotate(180deg);
+      }
+      &.valid { border-color: map-get($greens, base) }
+      &.error { border-color: map-get($reds, base) }
+    }
+  }
+
+  .c-form__button {
+    @extend .o-btn, .o-btn--normal;
+    display: block;
+    width: 100%;
+  }
+
+
+@media (min-width: $screen-sm-min) {
+  .c-form .row *[class^="col-"] {
+    padding-top: 15px;
+  }
+
+  .c-form--inline {
+    & > * {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+
+  .c-form__button {
+    display: inline-block;
+    width: auto;
+  }
+}

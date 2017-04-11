@@ -1,0 +1,12 @@
+section {
+
+}
+  .e-section--white {
+    background-color: map-get($c-backgrounds, normal);
+  }
+  .e-section--border-t {
+    border-top: 1px solid map-get($c-borders, normal);
+  }
+  .e-section--border-b {
+    border-bottom: 1px solid map-get($c-borders, normal);
+  }

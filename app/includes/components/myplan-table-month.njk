@@ -1,0 +1,88 @@
+<ul class="c-list c-list--horizontal u-txt--veneer u-mb--2">
+  <li class="pdf u-ml--3"><a href="#">Month</a></li>
+  <li class="pdf u-ml--3"><a href="#">Year</a></li>
+  <li class="pdf u-ml--3"><a href="#">Selected Date</a></li>
+</ul>
+
+<div class="c-myfert">
+  <section class="c-myfert__header o-row">
+    <div class="o-col xs--24 sm--5 c-myfert__season">
+      <a href="#" class="glyphicon glyphicon-triangle-left"></a>
+      <span class="hidden-xs">Season</span>
+      <span class="visible-xs">January 2017</span>
+      <a href="#" class="glyphicon glyphicon-triangle-right"></a>
+    </div>
+    <div class="o-col sm--19 hidden-xs">January 2017</div>
+  </section>
+
+  <section class="c-myfert__body">
+    {% from "data/myferts.njk" import myferts %}
+    {% for myfert in myferts %}
+      {% include "includes/partials/myfert-monthly.njk" %}
+    {% endfor %}
+
+
+  </section>
+
+  <div class="c-myplan c-myplan__total">
+    <div class="o-row c-myplan__header c-myplan__header--border-b">
+      <div class="o-col xs--24 c-myplan__description">
+        <h3 class="c-myplan__title">Total this month</h3>
+      </div>
+    </div>
+    <div class="o-row c-myplan__body">
+      <div class="o-col xs--8 offset-sm--5 sm--3 c-myplan__stage">
+          <table class="text-right">
+            <tbody><tr><td>Planned</td></tr>
+            <tr><td>Ordered</td></tr>
+            <tr class="bold"><td>Applied</td></tr>
+            <tr><td>Remaining</td></tr>
+          </tbody></table>
+        </div>
+      <div class="o-col hidden-xs sm--5 c-myplan__type">
+        <table class="u-table--pa5">
+            <tbody><tr>
+              <td><strong>N</strong>31</td>
+              <td><strong>P</strong>8</td>
+              <td><strong>K</strong>12</td>
+              <td><strong>S</strong>17</td>
+            </tr>
+            <tr>
+              <td><strong>N</strong>1</td>
+              <td><strong>P</strong>1</td>
+              <td><strong>K</strong>1</td>
+              <td><strong>S</strong>1</td>
+            </tr>
+            <tr>
+              <td><strong>N</strong>31</td>
+              <td><strong>P</strong>81</td>
+              <td><strong>K</strong>12</td>
+              <td><strong>S</strong>17</td>
+            </tr>
+            <tr>
+              <td><strong>N</strong></td>
+              <td><strong>P</strong></td>
+              <td><strong>K</strong></td>
+              <td><strong>S</strong></td>
+            </tr>
+          </tbody></table>
+        </div>
+      <div class="o-col xs--8 sm--3 c-myplan__tonnage">
+        <table class="text-right">
+          <tbody><tr><td>T 93,876</td></tr>
+          <tr><td>T 76,083</td></tr>
+          <tr class="bold"><td>T 70,276</td></tr>
+          <tr><td>T 6,083</td></tr>
+        </tbody></table>
+      </div>
+      <div class="o-col xs--8 sm--4 c-myplan__cost">
+        <table class="text-right">
+          <tbody><tr><td>$65,209.50</td></tr>
+          <tr><td>$43,439.29</td></tr>
+          <tr class="bold"><td>$45,097.15</td></tr>
+          <tr><td>$2,498.29</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+  </div>
+</div>

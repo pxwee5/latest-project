@@ -1,0 +1,236 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+  <div class="o-body-content__block news">
+
+    {% set breadcrumb = 'Contact us' %}
+    {% include "includes/components/header.njk" %}
+    {% from "data/heros.njk" import heros %}
+    {% set hero = heros[7] %}
+    {% include "includes/components/hero-static.njk" %}
+
+    <div class="container">
+      <section id="businessHours" class="u-mt--5">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <div class="c-article">
+              <div class="c-article__body">
+                <h3 class="e-heading--alt">Customer Service</h3>
+                <div class="u-txt--large">0800 222 090</div>
+                <a href="#" class="o-btn o-btn--normal o-btn--small">Email customer Service</a>
+                <p>
+                  <strong>Normal business hours:</strong><span> 7:00am - 5:30pm, closed weekends</span>
+                </p>
+              </div>
+              <div class="c-article__footer">
+                <a href="#" class="e-anchor--plus2 u-mt--0">View Christmas holiday hours</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="c-article">
+              <div class="c-article__body">
+                <h3 class="e-heading--alt">Shareholder enquiries</h3>
+                <div class="u-txt--large">0800 267 266</div>
+                <a href="#" class="o-btn o-btn--normal o-btn--small">Make an enquiry</a>
+                <p>
+                  <strong>Normal business hours:</strong><span> 7:00am - 5:30pm, closed weekends</span>
+                </p>
+              </div>
+              <div class="c-article__footer">
+                <a href="#" class="e-anchor--plus2 u-mt--0">View Christmas holiday hours</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="findSpecialist">
+        <h3>Find a Nutrient Specialist</h3>
+        <p>Use our smart lookup to search for your nearest Ballance Nutrient Specialist.</p>
+        <form class="c-form">
+          <div class="row row--inline row--inline-btm">
+            <div class="col-xs-12 col-sm-5 col-lg-4">
+              <div class="c-form__group u-mt--4">
+                <label for="smartAddress" class="c-form__label">Enter your address</label>
+                <input id="smartAddress" type="text" class="c-form__control c-form__input-text">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <button type="button" name="button" class="c-form__button u-ma--0">Search</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <hr />
+
+      <section id="storeLocator" class="clearfix">
+        <h3 class="u-mt--0">Ballance Store Locator</h3>
+
+        <div class="bh-sl-container u-pa--0">
+          <div class="bh-sl-form-container">
+            <form id="bh-sl-user-location" method="post" action="#">
+                <div class="form-input">
+                  <label for="bh-sl-address">Search by address, city or town:</label>
+                  <input type="text" id="bh-sl-address" name="bh-sl-address" />
+                </div>
+
+                <button id="bh-sl-submit" type="submit" class="">Search</button>
+            </form>
+          </div>
+
+          <div id="bh-sl-map-container" class="bh-sl-map-container">
+            <div id="bh-sl-map" class="bh-sl-map"></div>
+            <div class="bh-sl-loc-list">
+              <ul class="list"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="emailEnquiries">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <form class="c-form validate">
+              <h3 class="c-form__title">Email Enquiries</h3>
+              <span class="c-form__required">* Required fields</span>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="o-dropdown">
+                    <label for="enquiryType">Enquiry type *</label>
+                    <select id="enquiryType" class="c-form__select" name="" required>
+                      <option value="" disabled selected>Select enquiry type</option>
+                      <option value="fbk">Feedback</option>
+                      <option value="cpl">Complaint</option>
+                      <option value="cow">Cows</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="c-form__group">
+                    <label for="firstName" class="c-form__label">First Name *</label>
+                    <input id="firstName" type="text" name="firstName" class="c-form__control c-form__input-text" required>
+                    <span class="c-form__error-msg">First name required and must be alphabetical value</span>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="c-form__group">
+                    <label for="lastName" class="c-form__label">Last Name *</label>
+                    <input id="lastName" type="text" name="lastName" class="c-form__control c-form__input-text" required>
+                    <span class="c-form__error-msg">Last name required and must be alphabetical value</span>
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="c-form__group">
+                    <label for="customerNumber" class="c-form__label">Customer number <span class="u-txt--secondary">(if applicable)</span></label>
+                    <input id="customerNumber" type="text" class="c-form__control c-form__input-text">
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="c-form__group">
+                    <label for="subject" class="c-form__label">Email subject</label>
+                    <input id="subject" type="text" class="c-form__control c-form__input-text">
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="c-form__group">
+                    <label for="enquiry" class="c-form__label">Your enquiry *</label>
+                    <textarea id="enquiry" rows="7" type="text" class="c-form__control c-form__input-textarea" required></textarea>
+                    <span class="c-form__error-msg">Your enquiry is required</span>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="c-form__group">
+                    <label for="email" class="c-form__label">Email address *</label>
+                    <input id="email" type="email" class="c-form__control c-form__input-text" required>
+                    <span class="c-form__error-msg">Please input a valid email address</span>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="c-form__group">
+                    <label for="phone" class="c-form__label">Phone number *</label>
+                    <input id="phone" type="tel" class="c-form__control c-form__input-text" pattern="\d{9,12}" required>
+                    <span class="c-form__error-msg">Input a valid NZ number without symbols or spaces e.g. 0212345678</span>
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="o-dropdown">
+                    <label for="town">Nearest town *</label>
+                    <select id="town" class="c-form__select" name="" required>
+                      <option value="" disabled selected>Select nearest town</option>
+                      <option value="akl">Auckland</option>
+                      <option value="wel">Wellington</option>
+                      <option value="chc">Christchurch</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" name="button" class="c-form__button u-mt--4">Send email enquiry</button>
+            </form>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="c-article">
+              <div class="c-article__body">
+                <h4 class="e-heading--alt">Head Office</h4>
+                <div class="">
+                  <strong>Ballance Agri-Nutrients Limited</strong>
+                  <div>Hewletts Road</div>
+                  <div>Mount Mounganui</div>
+                  <div>Private Bag 12-503</div>
+                  <div>Tauranga</div>
+                </div>
+                <div class="u-mt--2">
+                  <div class=""><strong class="u-txt__width">P</strong> 07 572 7900</div>
+                  <div class=""><strong class="u-txt__width">F</strong> 07 572 6233</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-article u-mt--3">
+              <div class="c-article__body">
+                <h4 class="e-heading--alt">Kapanio</h4>
+                <div class="">
+                  <strong>Ballance Agri-Nutrients Limited</strong>
+                  <div>Hewletts Road</div>
+                  <div>Mount Mounganui</div>
+                  <div>Private Bag 12-503</div>
+                  <div>Hawera</div>
+                </div>
+                <div class="u-mt--2">
+                  <div class=""><strong class="u-txt__width">P</strong> 06 572 7900</div>
+                  <div class=""><strong class="u-txt__width">F</strong> 06 272 6931</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-article u-mt--3">
+              <div class="c-article__body">
+                <h4 class="e-heading--alt">South</h4>
+                <div class="">
+                  <strong>Ballance Agri-Nutrients Limited</strong>
+                  <div>Hewletts Road</div>
+                  <div>Mount Mounganui</div>
+                  <div>Private Bag 12-503</div>
+                  <div>Invercargill</div>
+                </div>
+                <div class="u-mt--2">
+                  <div class=""><strong class="u-txt__width">P</strong> 03 572 7900</div>
+                  <div class=""><strong class="u-txt__width">F</strong> 03 218 9380</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+{% endblock %}

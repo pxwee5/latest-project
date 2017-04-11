@@ -1,0 +1,30 @@
+.c-slide-in {
+  position: fixed;
+  width: 340px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all map-get($t-timing, fast-m);
+  background: map-get($c-backgrounds, normal);
+  z-index: 100;
+  border-left: 1px solid map-get($c-borders, darkest);
+  overflow-y: scroll;
+  &.active {
+    transform: translateX(0%);
+  }
+}
+
+  .c-slide-in__close:before {
+    content: "✕";
+    color: map-get($c-texts, medium);
+    font-family: sans-serif;
+    top: 0;
+    right: 0;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    position: absolute;
+    padding: 1rem;
+  }

@@ -1,0 +1,46 @@
+html {
+  font-family: $f-roboto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: map-get($blues, dark-xl);
+}
+h3,h4,h5,h6 {
+  &:first-child { margin-top: 0;}
+  &:last-child { margin-bottom: 0; }
+}
+.e-heading--alt {
+  font-family: $f-veneer-clean;
+  font-size: 1.15rem;
+  font-weight: normal;
+}
+
+h1 { font-size: map-get($f-h1, xs) }
+h2 { font-size: map-get($f-h2, xs) }
+h3 { font-size: map-get($f-h3, xs) }
+h4 { font-size: map-get($f-h4, xs) }
+h5 { font-size: map-get($f-h5, xs) }
+h6 { font-size: map-get($f-h6, xs) }
+
+@media (min-width: $screen-sm-min) {
+  h1,h2,h3,h4,h5,h6 {
+    margin-top: 3.5rem;
+  }
+  h1 { font-size: map-get($f-h1, sm) }
+  h2 { font-size: map-get($f-h2, sm) }
+  h3 { font-size: map-get($f-h3, sm) }
+  h4 { font-size: map-get($f-h4, sm) }
+  h5 { font-size: map-get($f-h5, sm) }
+  h6 { font-size: map-get($f-h6, sm) }
+}
+@media (min-width: $screen-lg-min) {
+  h1 { font-size: map-get($f-h1, lg) }
+  h2 { font-size: map-get($f-h2, lg) }
+  h3 { font-size: map-get($f-h3, lg) }
+  h4 { font-size: map-get($f-h4, lg) }
+  h5 { font-size: map-get($f-h5, lg) }
+  h6 { font-size: map-get($f-h6, lg) }
+}

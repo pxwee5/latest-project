@@ -1,0 +1,52 @@
+.o-table {
+  width: 100%;
+  border-top: 1px solid map-get($c-borders, normal);
+  color: map-get($c-table, text);
+  table-layout: fixed;
+  margin-top: $content-spacing;
+  &:first-child { margin-top: 0 }
+
+  thead {
+    background-color: map-get($c-table, head-bg);
+    color: map-get($c-table, head-text);
+
+  }
+
+  tr {
+    border-bottom: 1px solid map-get($c-borders, normal);
+  }
+  th { font-weight: normal; }
+  th, td {
+    // padding: 0.75rem 0;
+    padding: 0.75rem;
+  }
+}
+
+.o-table--responsive {
+  th, td {
+    display: none;
+
+    &:first-child {
+      display: table-cell;
+      width: auto;
+    }
+    &:last-child {
+      display: table-cell;
+      text-align: right;
+      width: auto;
+    }
+  }
+}
+@media (min-width: $screen-sm-min) {
+  .o-table {
+    th, td {
+      display: table-cell;
+      &:first-child {
+        padding-left: 1rem;
+      }
+      // &:last-child {
+      //   padding-right: 0.25rem;
+      // }
+    }
+  }
+}

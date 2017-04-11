@@ -1,0 +1,20 @@
+<div class="c-product">
+  <div class="c-product__header match-height">
+    <div class="u-split u-split--align-btm">
+      <img class="c-product__logo" src="{{product.logo_url}}" alt="">
+      <div class="c-product__name">{{product.name}}</div>
+    </div>
+  </div>
+  <div class="c-product__image" style="background-image: url({{product.image_url}})"></div>
+  <div id="grid-{{product.reference}}" class="c-product__desc-wrap collapse">
+    <div class="c-product__desc">{{product.description}}</div>
+  </div>
+  <div class="c-product__desc-btn o-btn__collapsible o-btn__collapsible--autotxt collapsed" aria-expanded="false" data-toggle="collapse" href="#grid-{{product.reference}}"></div>
+  <div class="c-product__footer">
+    <div class="c-product__split">
+      <div class="c-product__price">{{product.price}} / T</div>
+      <div class="c-product__ref">Ref: {{product.reference}}</div>
+    </div>
+    <a href="#" class="o-btn o-btn--normal o-btn--small o-btn--block c-product__link">Product Details</a>
+  </div>
+</div>

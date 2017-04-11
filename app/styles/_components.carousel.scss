@@ -1,0 +1,105 @@
+.c-carousel {
+  position: relative;
+  background-color: map-get($c-carousel, background);
+}
+  .c-carousel__slide {
+
+  }
+  .c-carousel__img {
+
+  }
+  .c-carousel__info {
+    width: 100%;
+    color: map-get($c-carousel, text);
+    overflow: hidden;
+    padding: 3rem 2.5rem;
+    background-color: rgba(map-get($c-carousel, text-bg), 1);
+    display: flex;
+    align-items: flex-end
+  }
+  .c-carousel__text {
+    p {
+      font-family: $f-roboto;
+      margin: 1.5rem 0;
+    }
+    .o-btn {
+      display: block;
+      width: 100%;
+      margin: auto;
+    }
+  }
+  .c-carousel__heading {
+    font-family: $f-veneer-clean;
+    font-weight: normal;
+    font-size: 2.5rem;
+    color: inherit;
+    margin: 0;
+  }
+
+  .owl-dots {
+    position: absolute;
+    bottom: 1.5rem; left: 50%;
+    transform: translate(-50%, 50%);
+    line-height: 0;
+    z-index: 50;
+  }
+    .owl-dot {
+      display: inline-block;
+      padding: 0.5rem;
+      opacity: 0.5;
+      span {
+        display: block;
+        width: 7px; height: 7px;
+        background-color: white;
+        border-radius: 50%;
+      }
+      &:hover { opacity: 0.75; }
+      &.active { opacity: 1; }
+    }
+
+@media (min-width: $screen-sm-min) {
+  .c-carousel__slide {
+    background-size: cover;
+    background-position: center;
+  }
+  .c-carousel__img {
+    visibility: hidden;
+  }
+  .c-carousel__info {
+    width: 60%;
+    margin-top: 5rem;
+    padding: 4rem 3rem 3rem;
+    background-color: rgba(map-get($c-carousel, text-bg), 0.75);
+  }
+  .c-carousel__text {
+    .o-btn {
+      display: inline-block;
+      width: auto;
+      margin: 0;
+      margin-top: 3rem;
+    }
+  }
+  .c-carousel__heading {
+    font-size: 3.25rem;
+  }
+  .owl-dots {
+    bottom: 4.2rem;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .c-carousel__img {
+    max-height: 200px;
+  }
+  .c-carousel__info {
+    width: 50%;
+    min-height: 400px;
+    margin-top: 60px;
+    padding: 5rem 3rem 3rem;
+  }
+  .c-carousel__text {
+    width: 75%;
+  }
+  .owl-dots {
+    left: 45%;
+  }
+}

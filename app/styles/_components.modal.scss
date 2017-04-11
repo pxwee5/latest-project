@@ -1,0 +1,25 @@
+.c-modal {
+  &.fade .c-modal__dialog { transform: translate(-50%, -75%); }
+  &.fade.in .c-modal__dialog { transform: translate(-50%, -50%); }
+}
+
+  .c-modal__dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    width: 100%;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  .c-modal__content {
+    border-radius: $border-radius;
+    box-shadow: none;
+    border: 1px solid map-get($c-borders, darker);
+  }
+
+@media (min-width: $screen-sm-min) {
+  .c-modal__dialog {
+    width: auto;
+  }
+}

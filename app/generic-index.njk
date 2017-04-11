@@ -1,0 +1,133 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+  {% from "data/heros.njk" import heros %}
+  {% set hero = heros[1] %}
+
+  <div class="o-body-content__block generic content">
+    {% include "includes/components/header.njk" %}
+    {% include "includes/components/hero-static.njk" %}
+
+    <div class="container">
+      <section class="c-content">
+        <h2 class="u-mt--0">Text Block Header</h2>
+        <p>Regular body copy, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ofﬁcia deserunt mollit anim id est laborum.</p>
+      </section>
+
+        <h2 class="e-heading--alt">Module Title</h2>
+        <div class="c-article">
+          <div class="c-video u-mt--0">
+            <div class="c-video__overlay">
+              <div class="c-video__play o-btn o-btn--normal o-btn--round">
+                <span class="glyphicon glyphicon-play"></span>
+              </div>
+              <div class="c-video__tag">
+                Label
+              </div>
+            </div>
+            <iframe id="story-video" class="c-video__embed" src="https://www.youtube.com/embed/GNfjZ8-qoVk?rel=0&disablekb=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="c-article__body">
+            <h3 class="c-article__title">Lorem ipsum dolor sit amet</h3>
+            <a href="#" class="c-article__button">Action Button</a>
+          </div>
+        </div>
+
+        <h2 class="e-heading--alt">Module Title Article Generic Primary</h2>
+        {% from "data/articles.njk" import articles %}
+        <div class="row">
+          {% for i in range(0, 3) -%}
+            {% set article = articles[i] %}
+            {% if loop.index == 3 %}
+            <div class="col-xs-12 col-sm-6 col-lg-4 visible-lg">
+            {% else %}
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+            {% endif %}
+              {% include "includes/partials/article-generic-primary.njk" %}
+            </div>
+          {% endfor %}
+        </div>
+
+        <h2 class="e-heading--alt">Module Title Article Generic Secondary</h2>
+        <div class="row">
+          {% for i in range(0, 3) -%}
+            {% set article = articles[i] %}
+            {% if loop.index == 3 %}
+            <div class="col-xs-12 col-sm-6 col-lg-4 visible-lg">
+            {% else %}
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+            {% endif %}
+              {% include "includes/partials/article-generic-secondary.njk" %}
+            </div>
+          {% endfor %}
+        </div>
+
+        <h2 class="e-heading--alt">Module Title Article Generic No Image</h2>
+        <div class="row">
+          {% for i in range(0, 3) -%}
+            {% set article = articles[i] %}
+            {% if loop.index == 3 %}
+            <div class="col-xs-12 col-sm-6 col-lg-4 visible-lg">
+            {% else %}
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+            {% endif %}
+              {% include "includes/partials/article-generic-no-image.njk" %}
+            </div>
+          {% endfor %}
+        </div>
+
+        <h2 class="e-heading--alt">Module Title Product Grid View</h2>
+        <div class="row">
+          {% from "data/products.njk" import products %}
+          {% for product in products %}
+            {% if loop.index == 3 %}
+            <div class="col-xs-12 col-sm-6 col-lg-4 visible-lg">
+            {% else %}
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+            {% endif %}
+              {% include "includes/partials/product-grid.njk" %}
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="hidden-xs">
+          <h2 class="e-heading--alt">Module Title Product List View</h2>
+          <div id="productListView" class="u-mt--2 active">
+            <div class="c-prod-list">
+              <div class="o-row c-prod-list__title">
+                <div class="o-col sm--5 lg--3">Range</div>
+                <div class="o-col sm--7 lg--5">Description</div>
+                <div class="o-col visible-lg-flex lg--5">More Btn</div>
+                <div class="o-col sm--3 lg--3">Refence</div>
+                <div class="o-col sm--4 lg--3">Price / T</div>
+                <div class="o-col sm--5 lg--5">Button</div>
+              </div>
+
+              <div class="c-product__list-target">
+                {% for product in products %}
+                  {% include "includes/partials/product-list.njk" %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="e-heading--alt">Module Title Article Generic Dated</h2>
+        <div class="row">
+          {% for i in range(0, 3) -%}
+            {% set article = articles[i] %}
+            {% if loop.index == 3 %}
+            <div class="col-xs-12 col-sm-6 col-lg-4 visible-lg">
+            {% else %}
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+            {% endif %}
+              {% include "includes/partials/article-generic-dated.njk" %}
+            </div>
+          {% endfor %}
+        </div>
+
+
+    </div>
+
+  </div>
+{% endblock %}

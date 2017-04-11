@@ -1,0 +1,95 @@
+.c-hero {
+  padding-top: calc(3.5rem - 1px);
+  background-color: map-get($c-carousel, background);
+}
+  .c-hero__wrapper {
+    background: no-repeat center / cover;
+  }
+  .c-hero__img {
+    display: block;
+    line-height: 0; font-size: 0;
+    width: 100%;
+    min-height: $header-height;
+    background-color: rgba(map-get($c-carousel, text-bg), 1);
+  }
+
+  .c-hero__info {
+    width: 100%;
+    color: map-get($c-carousel, text);
+    overflow: hidden;
+    padding: 3rem 30px;
+    background-color: rgba(map-get($c-carousel, text-bg), 1);
+  }
+    .c-hero__info--static {
+      display: table;
+    }
+
+  .c-hero__text {
+    vertical-align: bottom;
+    display: table-cell;
+
+    p {
+      font-family: $f-roboto;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      max-width: 390px;
+
+      @media (min-width: $screen-md-min) {
+        max-width: 425px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        max-width: 450px;
+      }
+    }
+    .o-btn {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+  .c-hero__heading {
+    font-family: $f-veneer-clean;
+    font-weight: normal;
+    font-size: 2.5rem;
+    color: inherit;
+    margin: 0;
+  }
+
+@media (min-width: $screen-sm-min) {
+  .c-hero {
+    padding-top: 0px;
+  }
+  .c-hero__info {
+    padding: calc(#{$header-height} + 3rem) calc(1.75rem + 15px) 3rem;
+    width: 60%;
+    min-height: 360px;
+    background-color: rgba(map-get($c-carousel, text-bg), 0.75);
+  }
+  .c-hero__img {
+    display: none;
+  }
+  .c-hero__text {
+    .o-btn {
+      display: inline-block;
+      width: auto;
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+  }
+  .c-hero__heading {
+    font-size: 3.25rem;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .c-hero {
+    padding-top: 0px;
+  }
+  .c-hero__img {
+    max-height: 200px;
+  }
+  .c-hero__info {
+    min-height: 360px;
+    width: 49%;
+  }
+}

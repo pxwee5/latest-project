@@ -1,0 +1,75 @@
+.c-graph {
+  margin: 2.5rem 0;
+  width: 100%;
+  padding-top: 30%;
+  font-size: 0.9rem;
+  color: map-get($blacks, light-s);
+  position: relative;
+  background: repeating-linear-gradient(
+    to top,
+    map-get($whites, dark-xxxs), map-get($whites, dark-xxxs) 1px,
+    map-get($whites, base) 1px, map-get($whites, base) calc(50% - 1px)
+  );
+}
+  .c-graph__min,
+  .c-graph__mid,
+  .c-graph__max {
+    position: absolute;
+    left: 13.5%;
+    color: map-get($whites, dark-l);
+  }
+  .c-graph__min {
+    bottom: 0;
+    transform: translate(-100%, 50%);
+  }
+  .c-graph__mid {
+    top: 50%;
+    transform: translate(-100%, -50%);
+  }
+  .c-graph__max {
+    top: 0;
+    transform: translate(-100%, -50%);
+  }
+  .c-graph__set {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 0 10% 0 15%;
+  }
+
+  .c-graph__data {
+    flex-grow: 1;
+    flex-basis: 0%;
+    position: relative;
+    margin-right: 2px;
+  }
+    .c-graph__bar {
+      position: absolute;
+      bottom: 0;
+      width: 100%; height: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      color: map-get($c-texts, invert);
+      text-shadow: 0px 0px 3px map-get($graph-blues, dark-l);
+      background: map-get($graph-blues, base);
+      transform-origin: bottom;
+      transition: height 1s cubic-bezier(0.75, 0, 0.5, 1.5),
+                  box-shadow 0.25s;
+      &:hover {
+        box-shadow: inset 0 0 100px 100px rgba(white, 0.25);
+      }
+      &.c-graph__bar--dark-s { background-color: map-get($graph-blues, dark-s); }
+      &.c-graph__bar--dark-m { background-color: map-get($graph-blues, dark-m); }
+      &.c-graph__bar--dark-l { background-color: map-get($graph-blues, dark-l); }
+    }
+    .c-graph__title {
+      position: absolute;
+      padding-top: 0.5rem;
+      left: 50%; bottom: 0%;
+      transform: translate(-50%, 100%);
+    }

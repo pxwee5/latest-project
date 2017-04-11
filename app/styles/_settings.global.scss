@@ -1,0 +1,23 @@
+$border-radius: 3px;
+
+/* Transition Timings */
+$t-timing: (
+  slow-m: 1.25s,
+  slow-s: 1.00s,
+  base: 0.75s,
+  fast-s: 0.5s,
+  fast-m: 0.25s,
+);
+
+$menu-btns-size: (
+  mobile: 3.5rem,
+  desktop: 4.3rem,
+);
+$header-height: 4rem;
+$content-spacing: 2rem;
+
+$glyphicon-plus: "\002b";
+$glyphicon-minus: "\2212";
+
+$cpl-sm: 35rem; //Approx 75 characters
+$cpl-lg: 52.5rem; //Approx 75 characters

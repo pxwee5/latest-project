@@ -1,0 +1,30 @@
+/**
+* Custom behaviors: Everything else comes here.
+**/
+
+// Store Locator
+.bh-sl-container button {
+  background: map-get($c-links, normal);
+}
+.bh-sl-container .bh-sl-loc-list .list-label {
+  background: map-get($c-links, normal);
+  box-sizing: content-box;
+  border-radius: 10px;
+  padding: 5px;
+}
+.bh-sl-container .bh-sl-loc-list .list-details {
+	width: 65%;
+}
+.bh-sl-container .loc-name {
+	font-weight: normal;
+	color: black;
+}
+.bh-sl-container .bh-sl-form-container {
+	margin-top: 0;
+}
+.bh-sl-container .bh-sl-map-container {
+  margin-bottom: 0;
+}
+.bh-sl-container label {
+	color: black;
+}

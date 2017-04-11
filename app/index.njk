@@ -1,0 +1,47 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+  <div class="o-body-content__block index">
+    {% include "includes/components/header.njk" %}
+    {% include "includes/components/hero.njk" %}
+    {% include "includes/products.njk" %}
+    {% include "includes/news.njk" %}
+    <section id="our-story" class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-8 c-story">
+            <h2 class="e-heading--alt">Our Story</h2>
+            <div class="c-story__video">
+
+              <div class="c-video">
+                <div class="c-video__overlay">
+                  <div class="c-video__play o-btn o-btn--normal o-btn--round">
+                    <span class="glyphicon glyphicon-play"></span>
+                  </div>
+                  <div class="c-video__tag">Video</div>
+                </div>
+                <iframe id="story-video" class="c-video__embed" src="https://www.youtube.com/embed/GNfjZ8-qoVk?rel=0&disablekb=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+
+              <div class="c-story__video-desc">
+                <h3 class="c-story__video-title">One great brand, many oustanding success stories</h3>
+                <a href="#" class="o-btn o-btn--normal">Read our story</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 c-story">
+            <h2 class="e-heading--alt">Join Us</h2>
+            <div class="c-story__join">
+              <div class="c-story__join-img" style="background-image: url(/images/joinus.jpg)"></div>
+              <ul class="c-story__join-links c-list c-list--checked">
+                <li><a href="#">Become a shareholder</a></li>
+                <li><a href="#">Apply for a scholarship</a></li>
+                <li><a href="#">Join the Ballance team</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+.o-body-content {
+  background-color: map-get($c-backgrounds, content);
+  position: relative;
+}
+
+// .o-body-content--overlay:before {
+//   content: '';
+//   position: absolute;
+//   width: 100%; height: 100%;
+//   z-index: 50;
+//   pointer-events: none;
+//   visibility: hidden;
+//   opacity: 0;
+//   // transition: background map-get($t-timing, fast-m);
+//   transition: background 1s;
+//   display: none;
+// }
+// .o-body-content--overlay.active:before {
+//   visibility: visible;
+//   background: rgba(black, 0.5);
+//   opacity: 1;
+//   pointer-events: all;
+// }
+
+.o-body-content__overlay {
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  transition: all map-get($t-timing, fast-m);
+  &.active {
+    visibility: visible;
+    background-color: rgba(black, 0.5);
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .o-body-content {
+    padding-left: calc(4.3rem);
+  }
+}

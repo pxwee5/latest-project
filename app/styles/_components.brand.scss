@@ -1,0 +1,21 @@
+.c-brand {
+
+}
+
+  .c-brand__image {
+    img {
+      max-height: 3rem;
+      width: auto;
+    }
+  }
+  .c-brand__content {
+    margin-top: 1.5rem;
+    padding-left: 29px;
+    padding-right: 0;
+  }
+
+@media (min-width: $screen-sm-min) {
+  .c-brand__content {
+    padding-right: 15%;
+  }
+}

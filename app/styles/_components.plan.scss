@@ -1,0 +1,52 @@
+.c-plan {
+  font-size: 0.95rem;
+
+  hr {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  table {
+    margin-top: 1.25rem;
+    width: 100%
+  }
+  td:first-child {
+    font-size: 0.9em;
+    color: map-get($c-texts, light);
+  }
+  th:last-child ,td:last-child {
+    text-align: right;
+  }
+}
+
+
+  .c-plan__header,
+  .c-plan__body,
+  .c-plan__footer {
+    padding: 1.25rem 2rem;
+  }
+
+  .c-plan__header {
+    padding-top: 0rem;
+    border-bottom: 1px solid map-get($c-borders, normal);
+  }
+
+  .c-plan__footer {
+    border-top: 1px solid map-get($c-borders, normal);
+  }
+
+  .c-plan__title {
+    font-family: $f-veneer-clean;
+    font-weight: normal;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+  .c-plan__total {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: 1.25rem;
+    text-align: right;
+    &:before {
+      content: 'Grand Total';
+      margin-right: 1.5rem;
+    }
+  }

@@ -1,0 +1,30 @@
+<header class="c-header">
+  <div class="container">
+    <div class="c-header__wrapper">
+
+      {% if breadcrumb %}
+        <ul class="c-list c-list--breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li>
+              {{ breadcrumb }}
+          </li>
+        </ul>
+      {% else %}
+        <!-- Note to Backend: Breadcrumb is controlled from backend to display or not to display -->
+        <ul class="c-list c-list--breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news.html">Page Level 1</a></li>
+          <li><a href="news-article.html">Page Level 2</a></li>
+        </ul>
+      {% endif %}
+
+      <div class="c-header__logo hidden-xs">
+        <h1> <!-- Note to backend: Only h1 in index page. h2 tag in all other pages. -->
+          <a href="index.html">
+            <img src="/images/logo.png" alt="Ballance">
+          </a>
+        </h1>
+      </div>
+    </div>
+  </div>
+</header>

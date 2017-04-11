@@ -1,0 +1,121 @@
+.o-btn {
+  line-height: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border-radius: $border-radius;
+  display: block;
+  border: 0;
+  padding: 7px 24px;
+  font-family: $f-veneer-clean;
+  color: map-get($c-buttons, text-normal);
+  background-color: map-get($c-buttons, bg-normal);
+  border: 1px solid map-get($c-buttons, bg-normal);
+  outline: none;
+  transition: all map-get($t-timing, base);
+}
+
+  .o-btn--normal {
+    &:hover {
+      background-color: map-get($c-buttons, bg-hover)
+    }
+    &:active {
+      background-color: map-get($c-buttons, bg-active)
+    }
+    &:disabled {
+      background-color: map-get($c-buttons, bg-disabled)
+    }
+    &:hover,
+    &:active,
+    &:focus,
+    &:disabled {
+      color: map-get($c-buttons, text-normal);
+    }
+  }
+
+  .o-btn--block {
+    display: block;
+    width: 100%;
+  }
+
+  .o-btn--block-responsive {
+    display: block;
+    width: 100%;
+  }
+
+  .o-btn--ghost {
+    background-color: map-get($c-buttons, bg-ghost);
+    border: 1px solid map-get($c-buttons, bg-normal);
+    color: map-get($c-buttons, bg-normal);
+    &:hover {
+      color: map-get($c-buttons, bg-ghost);
+      background-color: map-get($c-links, hover);
+    }
+    &:active {
+      color: map-get($c-buttons, bg-ghost);
+      background-color: map-get($c-links, active);
+    }
+  }
+
+.o-btn--round {
+  border-radius: 50%;
+  border: 2px solid map-get($c-buttons, text-normal);
+  background-color: rgba(map-get($c-buttons, bg-normal), 0.75);
+  width: 5rem; height: 5rem;
+  line-height: 5rem;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.o-btn__collapsible {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+  &:hover:before { color: map-get($c-buttons, bg-hover) }
+  &:active:before { color: map-get($c-buttons, bg-active); }
+
+  &:before {
+    @extend .glyphicon;
+    content: $glyphicon-plus;
+    margin-right: 1rem;
+    font-size: 1rem;
+    color: map-get($c-buttons, bg-normal);
+  }
+  &.active:before,
+  &[aria-expanded=true]:before { content: $glyphicon-minus; }
+}
+  .o-btn__collapsible--autotxt{
+    color: map-get($c-buttons, bg-normal);
+    &:hover { color: map-get($c-buttons, bg-hover); }
+    &:active { color: map-get($c-buttons, bg-active); }
+
+    &:after {
+      font-family: $f-veneer-clean;
+      font-size: 1.2rem;
+      content: 'MORE'
+    }
+    &.active:after,
+    &[aria-expanded=true]:after { content: 'LESS' }
+  }
+
+
+
+@media (min-width: $screen-sm-min) {
+  .o-btn {
+    display: inline-block;
+    padding: 12px 32px;
+  }
+  .o-btn--small {
+    font-size: 0.95rem;
+    padding: 6px 24px;
+    letter-spacing: 0.015em;
+  }
+  .o-btn--block-responsive {
+    display: inline-block;
+    width: auto;
+  }
+}

@@ -1,0 +1,157 @@
+.c-myplan {
+  font-size: 0.8rem;
+  border: 1px solid map-get($c-borders, normal);
+
+  & + .c-myplan {
+    border-top: 0;
+  }
+
+  table.u-table--pa5 {
+    th, td {
+      padding: 0 5px;
+    }
+  }
+  td {
+    white-space: nowrap;
+    &:after{
+      content: '';
+      display: inline-block;
+    }
+
+  }
+  tr { line-height: 1.5rem }
+  tr:nth-child(1) { color: map-get($c-texts, light) }
+  tr:nth-child(2) { color: inherit }
+  tr.bold { font-weight: bold }
+  tr:nth-child(4) { color: map-get($blues, base) }
+}
+
+.c-myplan__total {
+  margin-top: 1rem;
+}
+
+.c-myplan__title {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+  .c-myplan__header {
+    padding: 1rem 1.5rem;
+    background-color: map-get($c-backgrounds, normal);
+  }
+    .c-myplan__header--border-b {
+      border-bottom: 1px solid map-get($c-borders, normal);
+    }
+
+    .c-myplan__description {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .c-myplan__property {
+      margin-top: 0.75rem;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid map-get($c-borders, normal);
+      small {
+        font-weight: normal;
+      }
+    }
+
+  .c-myplan__body {
+    background-color: map-get($c-backgrounds, normal);
+    & > * {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+    .c-myplan__status {
+      padding: 0.25rem 1.5rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .c-myplan__progress {
+      margin-top: 0;
+      width: 100%;
+      max-width: 7rem;
+      color: map-get($c-texts, light);
+      span {
+        font-size: 1.25em;
+        font-weight: bold;
+        color: map-get($c-links, normal);
+        margin-right: 0.25rem;
+      }
+      progress {
+        width: 6rem;
+        color: map-get($c-links, normal);
+      }
+      progress::-webkit-progress-bar { background-color: map-get($c-links, normal); }
+      progress::-moz-progress-bar { color: map-get($c-links, normal); }
+    }
+    .c-myplan__button {
+      padding: 1.5rem;
+      padding-bottom: 2rem;
+      a { margin: 0; }
+    }
+
+@media (max-width: $screen-xs-max) {
+  .c-myplan__stage {
+    padding-left: 1.5rem;
+    align-items: flex-start;
+    table { text-align: left; }
+  }
+
+  .c-myplan__cost {
+    padding-right: 1.5rem;
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .c-myplan__total {
+    margin-top: 1rem;
+  }
+  .c-myplan__header {
+    padding: 1rem 1.5rem;
+    background-color: map-get($c-backgrounds, content);
+  }
+  .c-myplan__property {
+    margin-top: 0;
+    font-weight: bold;
+    align-items: flex-end;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  .c-myplan__body {
+    & > * {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    & > * { border-right: 1px solid map-get($c-borders, normal); }
+    & > *:last-child { border-right: 0; }
+  }
+  .c-myplan__status {
+    padding: 0 1.5rem;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .c-myplan__progress {
+    margin-top: 0.75rem;
+  }
+  .c-myplan__button {
+    padding: 0;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .c-myplan {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,84 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+  {% from "data/heros.njk" import heros %}
+  {% set hero = heros[3] %}
+
+  <div class="o-body-content__block">
+    {% include "includes/components/header.njk" %}
+    {% include "includes/components/hero-static.njk" %}
+
+    <div class="o-search">
+      <div class="container o-search__wrapper">
+        <label for="news-search" class="o-search__icon" aria-label="Search Products">
+          <span class="glyphicon glyphicon-search"></span>
+        </label>
+        <input id="news-search" class="o-search__input" type="search" name="" value="" placeholder="Search Products">
+        <div class="o-search__switcher c-switcher">
+          <span class="c-switcher__title">View</span>
+          <a class="c-switcher__list e-anchor--alt" href="#productListView" data-toggle="tab"></a>
+          <a class="c-switcher__grid e-anchor--alt active" href="#productGridView" data-toggle="tab"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-filter">
+      <div class="container">
+
+        <button id="filterButton" type="button" data-toggle="collapse" href="#filterGroup" class="o-btn__collapsible u-ptb--2 collapsed">
+          Product Filters
+        </button>
+
+        <div id="filterGroup" class="collapse">
+          <div class="c-filter__group">
+            <div class="c-filter__item col-xs-12 col-sm-4">
+              {% from "data/dropdowns.njk" import dropdowns %}
+              {% set dropdown = dropdowns[0] %}
+              {% include "includes/partials/dropdown.njk" %}
+            </div>
+            <div class="c-filter__item col-xs-12 col-sm-4">
+              {% set dropdown = dropdowns[1] %}
+              {% include "includes/partials/dropdown.njk" %}
+            </div>
+            <div class="c-filter__item col-xs-12 col-sm-4">
+              {% set dropdown = dropdowns[2] %}
+              {% include "includes/partials/dropdown.njk" %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-result">
+      <div class="container">
+        <div id="productGridView" class="row row--inline c-product__grid-target active">
+          {# Javascript adds products here using .c-product__grid-target. Data is from JSON file. #}
+        </div>
+
+        <div id="productListView" class="">
+          <div class="c-prod-list">
+            <div class="o-row c-prod-list__title">
+              <div class="o-col sm--5 lg--3">Range</div>
+              <div class="o-col sm--7 lg--5">Description</div>
+              <div class="o-col visible-lg-flex lg--5">More Btn</div>
+              <div class="o-col sm--3 lg--3">Refence</div>
+              <div class="o-col sm--4 lg--3">Price / T</div>
+              <div class="o-col sm--5 lg--5">Button</div>
+            </div>
+
+            <div class="c-product__list-target">
+              {# Javascript adds products here using .c-product__list-target. Data is from JSON file. #}
+            </div>
+          </div>
+        </div>
+
+        <div class="c-load-more">
+          <div class="c-load-more__count">Showing 7 of 80</div>
+          <button id="loadMoreProducts" class="o-btn o-btn--ghost o-btn--block c-load-more__btn c-spinner">Load More</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

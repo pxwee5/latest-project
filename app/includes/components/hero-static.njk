@@ -1,0 +1,12 @@
+<!-- Important to have two images set as background and using the <img> tag -->
+<div class="c-hero">
+  <div class="c-hero__wrapper" style="background-image: url('{{hero.image_url}}')">
+    <img src="{{hero.image_url}}" class="c-hero__img" alt="">
+    <div class="c-hero__info c-hero__info--static">
+      <div class="c-hero__text">
+        <h1 class="c-hero__heading">{{hero.title | safe}}</h1>
+        {{hero.description | safe}}
+      </div>
+    </div>
+  </div>
+</div>

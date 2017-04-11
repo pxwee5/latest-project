@@ -1,0 +1,260 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+  {% from "data/heros.njk" import heros %}
+  {% set hero = heros[4] %}
+
+  <div class="o-body-content__block news">
+    {% include "includes/components/header.njk" %}
+    {% include "includes/components/hero-static.njk" %}
+
+    <div class="o-back">
+      <div class="container">
+        <a href="/product.html" class="e-anchor--left-arrow">
+          Back to fertilisers
+        </a>
+      </div>
+    </div>
+
+    <div class="container c-product-detail">
+      <div class="row">
+        <div class="col-xs-12 col-md-8">
+
+          <section class="c-content">
+
+            <div class="c-content__float-left">
+              <p class="c-content__intro u-mt--0">SustaiN 15K is designed for use when you need to boost growth and replenish potassium levels at the same time.</p>
+              <p>It is particularly useful on soils prone to potassium leaching, e.g. pumice, sands and coarse-textured soils. In pastoral settings it is typically applied after calving and lambing. It may also be used as a side-dressing on crops, provided they are note chloride sensitive.</p>
+              <a href="#" class="e-anchor--plus">Read more</a>
+
+              <h2 class="e-heading--alt">Product Benefits</h2>
+              <ul>
+                <li>SustaiN reduces volatilisation losses through the action of the AGROTAIN® stabiliser.</li>
+                <li>Ballance-funded studies by AgResearch scientists show that in pastoral conditions, using SustaiN instead of urea will result in an average 50% reduction in volatilisation losses.</li>
+                <li>
+                  SustaiN is particularly suited to use in pastoral conditions where non-optimal or adverse conditions exist for a spreading (e.g. dry, no rain following application, poor pasture cover).
+                </li>
+                <li>
+                  It is also an ideal choice for use as surface-applied side-dressings on crops such as maize, where higher rates of nitrogen are used.
+                </li>
+              </ul>
+            </div>
+
+            <aside class="c-content__sidebar visible-xs visible-sm u-mt--0">
+              <div class="c-sidebar__panel u-mb--3">
+                <div class="c-sidebar__content u-pb--2">
+                  <h2 class="e-heading--alt">List Price</h2>
+                  <p>
+                    <span class="u-txt--large">$515.00</span>
+                    <span class="u-txt--med"> / T </span>
+                    (ex GST)
+                  </p>
+                  <p>Ref: 12081</p>
+                  <hr />
+                  <ul class="c-list c-list--checked">
+                    <li class="u-mt--0">Rebateable</li>
+                    <li>Bulk</li>
+                    <li>1 tonne, 500kg, 40kg</li>
+                  </ul>
+                </div>
+                <div class="c-graph">
+                  <div class="c-graph__min">0</div>
+                  <div class="c-graph__max">100</div>
+                  <div class="c-graph__set">
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="N">N</span>
+                      <span class="c-graph__bar" data-amount="100">100</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="P">P</span>
+                      <span class="c-graph__bar" data-amount="20">20</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="K">K</span>
+                      <span class="c-graph__bar" data-amount="55">55</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="S">S</span>
+                      <span class="c-graph__bar" data-amount="80">80</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="Mg">Mg</span>
+                      <span class="c-graph__bar" data-amount="80">80</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="Ca">Ca</span>
+                      <span class="c-graph__bar" data-amount="45">45</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="Na">Na</span>
+                      <span class="c-graph__bar" data-amount="10">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-sidebar__panel u-mb--3">
+                <div class="c-sidebar__content c-related--sidebar">
+                  <h2 class="e-heading--alt">Order Options</h2>
+                  <p>Place your order using these links or order directly online with our Omni Product Tool.</p>
+                  <ul class="c-related__list">
+                    <li><a href="#">Contact a Nutrient Specialist</a></li>
+                    <li><a href="#">Locate a Service Center</a></li>
+                    <li><a href="#">Login to Order Online*</a></li>
+                  </ul>
+                  <hr />
+                  <p class="u-txt--secondary">* You must ﬁrst be registered and an existing Ballance customer to be eligible for our online buying process.</p>
+                  <a href="#" class="e-anchor--arrow e-anchor--block">Find out more</a>
+                </div>
+              </div>
+            </aside>
+
+            <blockquote>
+              <h5>Important documents</h5>
+
+              <ul class="c-list c-list--typed c-list--2">
+                <li class="pdf">
+                  <a href="#">Product Safety Information</a>
+                </li>
+                <li class="pdf">
+                  <a href="#">Full Product Price List</a>
+                </li>
+                <li class="pdf">
+                  <a href="#">Full Terms &amp; Conditions</a>
+                </li>
+                <li class="pdf">
+                  <a href="#">Through Store Charges</a>
+                </li>
+              </ul>
+            </blockquote>
+
+            <div class="panel-groupx" id="accordion">
+              {% include 'includes/partials/full-product-range.njk' %}
+              {% include 'includes/partials/bagging-options.njk' %}
+              {% include 'includes/partials/usage-and-safety.njk' %}
+            </div>
+
+            <div class="c-content__float-left u-mb--0">
+              <h2 class="e-heading--alt">Availability</h2>
+              <p>SustaiN is available from all Ballance service centres and consignment stores.</p>
+
+              <p>SustaiN may be ordered by contacting our customer services team, your local Field consultant or your preferred rural merchant.</p>
+
+              <button class="o-btn o-btn--normal o-btn--small o-btn--block-responsive">Contact a nutrient specialist</button>
+              <button class="o-btn o-btn--normal o-btn--small o-btn--block-responsive">Locate a service centre</button>
+              <button class="o-btn o-btn--ghost o-btn--small o-btn--block-responsive">Login to order online*</button>
+
+              <p class="u-txt--secondary">* You must ﬁrst be registered and an existing Ballance customer to be eligible for our online buying process</p>
+
+              <a href="#" class="e-anchor--arrow e-anchor--block">Find out more</a>
+            </div>
+
+            <aside class="c-content__sidebar hidden-md hidden-lg">
+              <div class="c-sidebar__secondary">
+                <div class="c-sidebar__panel">
+                  <div class="c-sidebar__content">
+                    <h4 class="c-sidebar__title">Need some help?</h4>
+                    <p>We have an outstanding Customer Service team ready to assist you with your order orproduct related questions.</p>
+                    <button class="o-btn o-btn--normal o-btn--small">Email Customer Service</button>
+                    <p><strong>Phone: 0800 222 090</strong></p>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+
+          </section>
+        </div>
+
+        <div class="col-xs-12 col-md-4 hidden-xs hidden-sm">
+          <aside class="c-sidebar">
+            <div class="c-sidebar__secondary hidden-xs hidden-sm">
+
+              <div class="c-sidebar__panel u-mb--3">
+                <div class="c-sidebar__content u-pb--2">
+                  <h2 class="e-heading--alt">List Price</h2>
+                  <p>
+                    <span class="u-txt--large">$515.00</span>
+                    <span class="u-txt--med"> / T </span>
+                    (ex GST)
+                  </p>
+                  <p>Ref: 12081</p>
+                  <hr />
+                  <ul class="c-list c-list--checked">
+                    <li class="u-mt--0">Rebateable</li>
+                    <li>Bulk</li>
+                    <li>1 tonne, 500kg, 40kg</li>
+                  </ul>
+                </div>
+                <div class="c-graph">
+                  <div class="c-graph__min">0</div>
+                  <div class="c-graph__mid">25</div>
+                  <div class="c-graph__max">50+</div>
+                  <div class="c-graph__set">
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="N">N</span>
+                      <span class="c-graph__bar" data-amount="100">100</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="P">P</span>
+                      <span class="c-graph__bar" data-amount="20">20</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="K">K</span>
+                      <span class="c-graph__bar" data-amount="55">55</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="S">S</span>
+                      <span class="c-graph__bar" data-amount="80">80</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="Mg">Mg</span>
+                      <span class="c-graph__bar" data-amount="80">80</span>
+                    </div>
+                    <div class="c-graph__data">
+                      <span class="c-graph__title" data-ingredient="Ca">Ca</span>
+                      <span class="c-graph__bar" data-amount="45">45</span>
+                    </div>
+                    <!-- <div class="c&#45;graph__data"> -->
+                    <!--   <span class="c&#45;graph__title" data&#45;ingredient="Na">Na</span> -->
+                    <!--   <span class="c&#45;graph__bar" data&#45;amount="10">10</span> -->
+                    <!-- </div> -->
+                  </div>
+                </div>
+                <div class="c-sidebar__content">
+                  <p class="u-txt--secondary">
+                    This product contains 0.4% of sodium per T
+                  </p>
+                </div>
+              </div>
+              <div class="c-sidebar__panel u-mb--3">
+                <div class="c-sidebar__content c-related--sidebar">
+                  <h2 class="e-heading--alt">Order Options</h2>
+                  <p>Place your order using these links or order directly online with our Omni Product Tool.</p>
+                  <ul class="c-related__list">
+                    <li><a href="#">Contact a Nutrient Specialist</a></li>
+                    <li><a href="#">Locate a Service Center</a></li>
+                    <li><a href="#">Login to Order Online*</a></li>
+                  </ul>
+                  <hr />
+                  <p class="u-txt--secondary">* You must ﬁrst be registered and an existing Ballance customer to be eligible for our online buying process.</p>
+                  <a href="#" class="e-anchor--arrow e-anchor--block">Find out more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-sidebar__secondary hidden-xs hidden-sm">
+              <div class="c-sidebar__panel u-mb--3">
+                <div class="c-sidebar__content">
+                  <h2 class="e-heading--alt">Need some help?</h2>
+                  <p>We have an outstanding Customer Service team ready to assist you with your order orproduct related questions.</p>
+                  <button class="o-btn o-btn--normal o-btn--small">Email Customer Service</button>
+                  <p><strong>Phone: 0800 222 090</strong></p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

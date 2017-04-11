@@ -1,0 +1,9 @@
+p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+
+  &.e-paragraph--less {
+    color: map-get($whites, dark-m);
+    margin-bottom: 0.5rem !important;
+  }
+}

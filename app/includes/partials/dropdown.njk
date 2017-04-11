@@ -1,0 +1,37 @@
+{# <div class="o-dropdown">
+  <button class="o-dropdown__button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="o-dropdown__text">{{dropdown.button}}</span>
+  </button>
+  <ul class="dropdown-menu o-dropdown__menu {{dropdown.multiClass}}">
+    {% if dropdown.multiClass %}
+      <li class="j-opt j-opt--all">
+        <span><input type="checkbox"><label></label>Select all</span>
+        <span class="j-opt--close">✕</span>
+      </li>
+      {% for opt in dropdown.options %}
+        <li><span><input type="checkbox" /><label></label>{{opt}}</span></li>
+      {% endfor %}
+    {% else %}
+      {% for opt in dropdown.options %}
+        <li><span>{{opt}}</span></li>
+      {% endfor %}
+    {% endif %}
+  </ul>
+  <label class="o-dropdown__label">{{dropdown.label}}</label>
+</div> #}
+
+<div class="o-dropdown">
+  <label for="">{{dropdown.label}}</label>
+
+  {% if dropdown.multiClass %}
+    <select name="" class="o-dropdown__select" multiple>
+  {% else %}
+    <select name="" class="o-dropdown__select">
+  {% endif %}
+
+  <option value="" disabled selected>{{dropdown.button}}</option>
+  {% for opt in dropdown.options %}
+    <option value="{{opt | replace(' ', '-')}}">{{opt}}</option>
+  {% endfor %}
+  </select>
+</div>

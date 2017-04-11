@@ -1,0 +1,34 @@
+<div class="c-prod-list__item">
+  <div class="o-row c-prod-list__header">
+    <div class="o-col sm--5 lg--3 c-prod-list__logo"><img src="{{product.logo_url}}" alt=""></div>
+    <div class="o-col sm--7 lg--5 c-prod-list__name">{{product.name}}</div>
+    <div class="o-col visible-lg-flex lg--5">
+      <button class="o-btn__collapsible o-btn__collapsible--autotxt" href="#list-{{product.reference}}" data-toggle="collapse"></button>
+    </div>
+    <div class="o-col sm--3 lg--3 c-prod-list__ref">{{product.reference}}</div>
+    <div class="o-col sm--4 lg--3 c-prod-list__price">{{product.price}}</div>
+    <div class="o-col sm--5 lg--5">
+      <a href="#" class="o-btn o-btn--normal o-btn--small o-btn--block c-prod-list__link u-mt--0 u-mr--0">
+        <span class="visible-lg-inline">Product</span>
+        <span>Details</span>
+      </a>
+    </div>
+  </div>
+  <div id="list-{{product.reference}}" class="c-prod-list__content collapse">
+    <div class="o-row">
+      <div class="o-col visible-lg-flex lg--3">&nbsp;</div>
+      <div class="o-col sm--12 lg--10">
+        <div class="c-prod-list__desc">
+          {{product.description}}
+        </div>
+      </div>
+      <div class="o-col visible-lg-flex lg--3">&nbsp;</div>
+      <div class="o-col sm--12 lg--8">
+        <div class="c-prod-list__image" style="background-image: url({{product.image_url}})"></div>
+      </div>
+    </div>
+  </div>
+  <div class="c-prod-list__footer">
+    <button class="o-btn__collapsible o-btn__collapsible--autotxt visible-sm visible-md" href="#list-{{product.reference}}" data-toggle="collapse"></button>
+  </div>
+</div>

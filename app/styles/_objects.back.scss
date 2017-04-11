@@ -1,0 +1,9 @@
+.o-back {
+  font-family: $f-veneer-clean;
+  position: relative;
+  width: 100%;
+  background-color: map-get($c-backgrounds, normal);
+  padding: 1.75rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  text-transform: uppercase;
+}

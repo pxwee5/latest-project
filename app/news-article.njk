@@ -1,0 +1,178 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+
+  {% from "data/heros.njk" import heros %}
+  {% set hero = heros[0] %}
+
+  <div class="o-body-content__block news">
+    {% include "includes/components/header.njk" %}
+    {% include "includes/components/hero-static.njk" %}
+
+    <div class="c-news-article">
+      <div class="o-back">
+        <div class="container">
+          <a href="/news.html" class="e-anchor--left-arrow">
+            Back to news
+          </a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+
+            <section class="c-content">
+              <p class="c-content__date">01 December 2016</p>
+              <h1>Effort in gets best nitrogen reports out</h1>
+
+              <div class="c-video u-mtb--6">
+                <div class="c-video__overlay">
+                  <div class="c-video__play o-btn o-btn--normal o-btn--round">
+                    <span class="glyphicon glyphicon-play"></span>
+                  </div>
+                </div>
+                <iframe id="story-video" class="c-video__embed" src="https://www.youtube.com/embed/GNfjZ8-qoVk?rel=0&disablekb=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+
+              <aside class="c-content__sidebar hidden-md hidden-lg">
+                <div class="c-sidebar__panel">
+                  <img src="images/news1.jpg" alt="News 1">
+                </div>
+              </aside>
+
+              <p>
+              As dairy farms’ nitrogen reports start hitting letterboxes for last season, farmers are being encouraged to put as much effort into this season’s recording as they do into producing milk.
+              </p>
+
+              <p>
+              “These reports are a great tool for assisting farmers to analyse their nutrient use and see what needs to be done to improve their nutrient efﬁciency,” says our Farm Sustainability Services Manager, Alastair Taylor.
+              </p>
+
+              <p>
+              “We know from our records how much fertiliser we have sold to a farm, for example, but what we don’t always know is where it was used, or if supplies were topped up from another provider. A farm might be feeding out silage or baleage from a run-off block, but don’t record it as brought-in feed because to them it’s home-grown. The better the information provided, the better the accuracy and the value of the ﬁnal report.”
+              </p>
+
+              <p>
+              Individual nitrogen reports provide farmers with their nitrogen leaching risk and nitrogen conversion efﬁciency results, allowing them to compare their performance against other farms in their region. Increasing controls over farming in areas like Canterbury and the Waikato also mean the reports are a useful aid to achieving compliance with local requirements.
+              </p>
+
+              <blockquote>
+                <span>"Even if you don’t do the formal recording, making a quick note about changes in stock numbers when they happen, or where you applied applications of fertiliser, all contribute to a better end result."</span>
+              </blockquote>
+
+              <p>
+              While keeping close records can be seen as a chore when there’s more pressing work to do, Alastair says attention to detail is increasingly important. “Even if you don’t do the formal recording, making a quick note about changes in stock numbers when they happen, or where you applied applications of fertiliser, all contribute to a better end result.”
+              </p>
+
+              <p>
+              “Each season we’re generating more than 3,000 reports over a six week period using the industry modelling tool Overseer™. The information we provide then goes back to farms via their milk company.” Reports help the dairy companies, farmers and their Ballance Nutrient Specialists to identify potential improvements to nitrogen use efﬁciency.
+              </p>
+
+              <p>
+              “With many regional councils bringing in nitrogen and phosphate rules, and with both being fundamental to farm production, losses are both a compliance challenge and effectively dollars down the drain. Aiming for high maximum nutrient efﬁciency makes farming, ﬁnancial and environmental sense.”
+              </p>
+
+              <p>
+              We have a range of free resources for anyone interested in turning the learnings from their reports into action - <a href="#">click here to learn more</a>
+              </p>
+
+              {% include "includes/partials/content-social.njk" %}
+              <hr>
+              {% from "includes/partials/content-footer.njk" import footers %}
+              {{ footers[1].footer|safe }}
+
+            </section>
+          </div>
+
+          <div class="col-xs-12 col-md-4">
+            <aside class="c-sidebar">
+              <div class="hidden-xs hidden-sm c-sidebar__secondary">
+                <div class="c-sidebar__panel">
+                  <img src="images/news1.jpg" alt="News 1">
+                </div>
+              </div>
+              <div class="c-sidebar__primary">
+                <h2 class="e-heading--alt">Related Products</h2>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-12">
+                    <div class="c-sidebar__panel u-mb--2">
+                      <div class="c-sidebar__content">
+                        <div class="match-height">
+                          <div class="c-sidebar__brand u-split u-split--align-btm">
+                            <div><img src="/images/brand1.jpg" alt="Spread Smart Technology"></div>
+                            <div><strong>SustaiN AMMO 36N</strong></div>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                          et dolore magna aliqua. Ut enim ad minim&hellip;</p>
+                        </div>
+                        <a href="#" class="o-btn o-btn--normal o-btn--small o-btn--block">Product Details</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-12">
+                    <div class="c-sidebar__panel u-mb--2">
+                      <div class="c-sidebar__content">
+                        <div class="match-height">
+                          <div class="c-sidebar__brand u-split u-split--align-btm">
+                            <div><img src="/images/brand3.png" alt="Spread Smart Technology"></div>
+                            <div><strong>Pasturezeal G2 Hay &amp; Silage</strong></div>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                          et dolore magna aliqua. Ut enim ad minim&hellip;</p>
+                        </div>
+                        <a href="#" class="o-btn o-btn--normal o-btn--small o-btn--block">Product Details</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-12">
+                    <div class="c-sidebar__panel u-mb--2">
+                      <div class="c-sidebar__content">
+                        <div class="match-height">
+                          <div class="c-sidebar__brand u-split u-split--align-btm">
+                            <div><img src="/images/brand4.png" alt="Spread Smart Technology"></div>
+                            <div><strong>Cropzeal 20N</strong></div>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                          et dolore magna aliqua. Ut enim ad minim&hellip;</p>
+                        </div>
+                        <a href="#" class="o-btn o-btn--normal o-btn--small o-btn--block">Product Details</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-12">
+                    <div class="c-sidebar__panel c-sidebar__panel--alt u-mb--2">
+                      <div class="c-sidebar__content">
+                        <h3 class="e-heading--alt">Lookin for another product?</h3>
+                        <p>If these products are not what you’re after, view our full range of key fertiliser products.</p>
+                        <a href="#" class="e-anchor--arrow e-anchor--block">View all key products</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+          </div>
+        </div>
+
+        <hr>
+
+        <h2 class="e-heading--alt">Related stories</h2>
+        <div class="row">
+          {% from "data/articles.njk" import articles %}
+          {% for article in articles %}
+            {% if loop.index == 3 %}
+            <div class="col-xs-12 col-sm-6 col-lg-4 visible-lg">
+            {% else %}
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+            {% endif %}
+              {% include "includes/components/article-news.njk" %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+<div class="c-prod-list__item">
+  <div class="o-row c-prod-list__header">
+    <div class="o-col sm--5 lg--3 c-prod-list__logo"><img src="{{logo_url}}" alt=""></div>
+    <div class="o-col sm--7 lg--5 c-prod-list__name">{{name}}</div>
+    <div class="o-col visible-lg-flex lg--5">
+      <button class="o-btn__collapsible o-btn__collapsible--autotxt" href="#{{guid}}" data-toggle="collapse"></button>
+    </div>
+    <div class="o-col sm--3 lg--3 c-prod-list__ref">{{ref}}</div>
+    <div class="o-col sm--4 lg--3 c-prod-list__price">{{price}}</div>
+    <div class="o-col sm--5 lg--5">
+      <a href="#" class="o-btn o-btn--normal o-btn--small o-btn--block c-prod-list__link u-mt--0">
+        <span class="visible-lg-inline">Product </span>
+        <span>Details</span>
+      </a>
+    </div>
+  </div>
+  <div id="{{guid}}" class="c-prod-list__content collapse">
+    <div class="o-row">
+      <div class="o-col visible-lg-flex lg--3">&nbsp;</div>
+      <div class="o-col sm--12 lg--10">
+        <div class="c-prod-list__desc">{{description}}</div>
+      </div>
+      <div class="o-col visible-lg-flex lg--3">&nbsp;</div>
+      <div class="o-col sm--12 lg--8">
+        <div class="c-prod-list__graph">
+          <div class="c-graph">
+            <div class="c-graph__min">0</div>
+            <div class="c-graph__mid">25</div>
+            <div class="c-graph__max">50+</div>
+            <div class="c-graph__set">
+              {{#data}}
+              <div class="c-graph__data">
+                <span class="c-graph__title" data-ingredient="{{name}}">{{name}}</span>
+                <span class="c-graph__bar" data-amount="{{amount}}"></span>
+              </div>
+              {{/data}}
+            </div>
+          </div>
+          <div class="text-center">
+            <p class="u-txt--secondary">
+            This product contains {{na}}% of sodium per T
+            </p>
+            <p>
+            &nbsp;
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="c-prod-list__footer">
+    <button class="o-btn__collapsible o-btn__collapsible--autotxt visible-sm visible-md" href="#{{guid}}" data-toggle="collapse"></button>
+  </div>
+</div>

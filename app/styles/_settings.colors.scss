@@ -1,0 +1,193 @@
+/*
+Use this setup
+$color: (
+  light-xl
+  light-l
+  light-m
+  light-s
+  light-xs
+  base:
+  dark-xm
+  dark-s
+  dark-m
+  dark-l
+  dark-xl
+)
+*/
+
+// Color declaration
+$blues: (
+  base : #00AEEF,
+  dark-s : #0090C6,
+  dark-m : #007ba9,
+  dark-l : #394857,
+  dark-xl : #2C3745,
+);
+
+$blacks: (
+  light-xxl: #d6d6d6,
+  light-s: #5A5A5A,
+  base: #333333,
+);
+
+$whites: (
+  base: #ffffff,
+  dark-xxxs: #f2f2f2,
+  dark-xxs: #f9f9f9,
+  dark-xs: #f3f3f3,
+  dark-s: #ebebeb,
+  dark-m: #BDBDBD,
+  dark-l: #ABABAB,
+  dark-xl: #9B9B9B,
+);
+
+$reds: (
+  base: #EF5315,
+);
+$yellows: (
+  base: #E79400,
+);
+$greens: (
+  base: #51920A,
+);
+$graph-blues: (
+  base: #b2e7fa,
+  dark-s: #73d3f6,
+  dark-m: #33bef2,
+  dark-l: #00aeef,
+);
+
+$c-shadows: (
+  base: rgba(black, 0.075),
+);
+
+// Variable c-var denotes color variable
+$c-links: (
+  normal: map-get($blues, base),
+  hover: map-get($blues, dark-s),
+  active: map-get($blues, dark-m),
+  focus: map-get($blues, dark-m),
+  disabled: map-get($whites, dark-m),
+);
+$c-links-alt: (
+  normal: map-get($blacks, base),
+  hover: map-get($blues, dark-s),
+  active: map-get($blues, dark-m),
+  focus: map-get($blacks, dark-m),
+  open: map-get($blacks, dark-m),
+  disabled: map-get($whites, dark-m),
+);
+$c-backgrounds: (
+  normal: map-get($whites, base),
+  content: map-get($whites, dark-xxs),
+  well: map-get($whites, dark-xs),
+);
+$c-borders: (
+  normal: map-get($whites, dark-s),
+  dark: map-get($blacks, light-xxl),
+  darker: map-get($whites, dark-m),
+  darkest: map-get($whites, dark-xl),
+);
+$c-texts: (
+  normal: map-get($blacks, base),
+  light: map-get($whites, dark-l),
+  medium: map-get($whites, dark-xl),
+  invert: map-get($whites, base),
+);
+
+$c-buttons: (
+  text-normal: map-get($whites, base),
+  bg-normal: map-get($c-links, normal),
+  bg-hover: map-get($c-links, hover),
+  bg-active: map-get($c-links, active),
+  bg-disabled: map-get($blues, base),
+  bg-ghost: map-get($whites, base),
+);
+
+$c-menu: (
+  background: map-get($whites, base),
+);
+$c-menu-btns: (
+  bg-desktop: map-get($whites, base),
+  bg-mobile: map-get($blues, dark-xl),
+  icon-sep-mobile: map-get($blacks, base),
+  icon-sep-desktop: map-get($whites, dark-s),
+  icon-txt: map-get($blacks, base),
+  border-desktop: map-get($whites, dark-s),
+  icon-active-mobile: map-get($whites, base),
+  icon-active-desktop: map-get($blacks, base),
+);
+$c-menu-nav: (
+  background: map-get($whites, base),
+  primary-tier1: map-get($blues, base),
+  primary-tier2: map-get($blues, base),
+  primary-tier3: map-get($blues, base),
+  link-active: map-get($blacks, base),
+  secondary: map-get($blacks, base),
+);
+$c-header: (
+  background: map-get($blues, dark-xl),
+  separator: map-get($whites, dark-m),
+);
+$c-footer: (
+  background: map-get($blues, dark-xl),
+  font: map-get($whites, dark-xl),
+  title: map-get($whites, base)
+);
+$c-social: (
+  background: map-get($blues, base),
+  text-dark: map-get($blues, dark-xl),
+  text-light: map-get($whites, base),
+);
+$c-carousel: (
+  background: map-get($blues, dark-xl),
+  text-bg: map-get($blues, dark-s),
+  text: map-get($whites, base),
+  dot: map-get($whites, base),
+);
+$c-grid: (
+  title: map-get($blues, dark-xl),
+);
+$c-article: (
+  background: map-get($whites, base),
+  border: map-get($whites, dark-s),
+  tag: map-get($whites, base),
+  tag-bg: map-get($blues, dark-xl),
+  date: map-get($whites, dark-m),
+  text: map-get($blacks, base),
+);
+
+$c-form: (
+  background: map-get($whites, base),
+  label: map-get($whites, dark-m),
+  border: map-get($whites, dark-s),
+  button: map-get($blues, dark-xl),
+  error-msg: map-get($reds, base),
+);
+
+$c-lists: (
+  document-bg: map-get($blues, base),
+  document-text: map-get($whites, base),
+  separator: map-get($whites, dark-xl),
+);
+
+$c-table: (
+  text: map-get($blacks, base),
+  head-bg: map-get($whites, dark-xxs),
+  head-text: map-get($whites, dark-m),
+);
+$c-sidebar: (
+  panel-bg: map-get($whites, base),
+  panel-border: map-get($c-borders, normal),
+);
+$c-people: (
+  card-bg: map-get($whites, base),
+  location: map-get($whites, dark-l),
+  image-shadow: rgba(map-get($whites, dark-m), 0.5),
+);
+$c-product: (
+  name: map-get($blues, dark-l),
+);
+$c-myfert: (
+  header-background: map-get($blues, dark-l),
+)

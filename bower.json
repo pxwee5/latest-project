@@ -1,0 +1,42 @@
+{
+  "name": "ballance",
+  "private": true,
+  "dependencies": {
+    "jquery": "jQuery#2.1.1",
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.1",
+    "owl.carousel": "^2.2.0",
+    "jquery.pointer-events-polyfill": "^0.2.4",
+    "matchHeight": "https://github.com/liabru/jquery-match-height.git#^0.7.0",
+    "jscroll": "^2.3.7",
+    "es6-promise": "^4.0.5",
+    "mustache.js": "mustache#^2.3.0",
+    "in-view": "*",
+    "font-awesome": "fontawesome#^4.7.0",
+    "jquery-storelocator-plugin": "jquery-store-locator#^2.7.2"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    },
+    "es6-promise": {
+      "main": "es6-promise.auto.min.js"
+    },
+    "jquery-storelocator-plugin": {
+      "main": [
+        "dist/assets/css/storelocator.min.css"
+      ]
+    },
+    "in-view": {
+      "main": "dist/in-view.min.js"
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}

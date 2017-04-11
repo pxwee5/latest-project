@@ -1,0 +1,16 @@
+<div class="c-article c-article--no-border c-article--no-bg">
+  <a href="{{article.permalink}}">
+    <div class="c-article__img c-article__img--narrow" style="background-image: url({{article.image_url}})">
+      {# <div class="c-article__img-tag">{{article.tag}}</div> #}
+    </div>
+    <div class="c-article__body">
+      <div class="match-height">
+        <h3 class="c-article__title e-heading--alt">{{article.title}}</h3>
+        <p class="c-article__desc">
+          {{article.description}}
+        </p>
+      </div>
+      <button class="c-article__button" type="button" name="button">{{article.button_txt}}</button>
+    </div>
+  </a>
+</div>

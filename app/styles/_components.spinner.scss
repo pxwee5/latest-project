@@ -1,0 +1,16 @@
+.c-spinner {
+
+
+  &:after {
+    animation: fa-spinner 1s linear infinite;
+    content: "\f110";
+    @extend .fa;
+    position: absolute;
+    margin-left: 0.75rem;
+    opacity: 0;
+    transition: all map-get($t-timing, fast-m);
+  }
+  &.active:after {
+    opacity: 1;
+  }
+}
